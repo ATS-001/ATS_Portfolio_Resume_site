@@ -4,7 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -169,8 +169,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-08C94S7H5P" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-08C94S7H5P');
+          `}
+        </Script>
       </body>
-      <GoogleAnalytics gaId="G-08C9457H5P" />
     </html>
   );
 }
