@@ -40,7 +40,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600 dark:bg-green-500"></span>
               </span>
-              <span className="text-xs font-medium text-zinc-600 dark:text-zinc-300 tracking-wide uppercase">Available for work</span>
+              <span className="text-xs font-medium text-zinc-600 dark:text-zinc-300 tracking-wide uppercase">Currently studying</span>
             </div>
 
             <h1 className="text-[clamp(2.5rem,8vw,4.5rem)] leading-[1.05] font-medium tracking-tight text-zinc-900 dark:text-white mb-6">
