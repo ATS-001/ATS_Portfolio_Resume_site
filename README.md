@@ -33,7 +33,7 @@ Built with a modern editorial design system, accessibility support, advanced SEO
 
 ## Preview
 
-![Portfolio Preview](./screenshots/homepage.png)
+![Portfolio Preview](./public/homepage.png)
 
 ---
 
