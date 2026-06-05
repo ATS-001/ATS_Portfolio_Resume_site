@@ -234,17 +234,49 @@ export default function ParticleBackground() {
   }, [resolvedTheme]);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-700 ease-in-out">
-      {/* Background gradients for dark mode / light mode */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-slate-200/50 dark:bg-zinc-900/40 blur-[120px] pointer-events-none transition-colors duration-700 ease-in-out" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-zinc-200/50 dark:bg-zinc-800/30 blur-[120px] pointer-events-none transition-colors duration-700 ease-in-out" />
+    <div className="fixed inset-0 z-[-1] overflow-hidden bg-background transition-colors duration-700 ease-in-out">
+      <style>{`
+        @keyframes drift1 {
+          0% { transform: translate(0%, 0%) scale(1); }
+          33% { transform: translate(10%, -10%) scale(1.1); }
+          66% { transform: translate(-10%, 5%) scale(0.9); }
+          100% { transform: translate(0%, 0%) scale(1); }
+        }
+        @keyframes drift2 {
+          0% { transform: translate(0%, 0%) scale(1); }
+          33% { transform: translate(-10%, 15%) scale(0.9); }
+          66% { transform: translate(15%, -10%) scale(1.1); }
+          100% { transform: translate(0%, 0%) scale(1); }
+        }
+        @keyframes drift3 {
+          0% { transform: translate(0%, 0%) scale(1.1); }
+          33% { transform: translate(5%, 10%) scale(0.9); }
+          66% { transform: translate(-15%, -5%) scale(1); }
+          100% { transform: translate(0%, 0%) scale(1.1); }
+        }
+        
+        .blob-1 { animation: drift1 60s ease-in-out infinite; }
+        .blob-2 { animation: drift2 75s ease-in-out infinite; }
+        .blob-3 { animation: drift3 90s ease-in-out infinite; }
+      `}</style>
+
+      {/* Atmospheric Gradient Layer */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="blob-1 absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] min-w-[500px] min-h-[500px] rounded-full bg-gradient-1 blur-[100px] lg:blur-[180px] mix-blend-normal transition-colors duration-1000 ease-in-out" />
+        <div className="blob-2 absolute top-[20%] right-[-20%] w-[60vw] h-[80vw] min-w-[500px] min-h-[500px] rounded-full bg-gradient-2 blur-[100px] lg:blur-[180px] mix-blend-normal transition-colors duration-1000 ease-in-out" />
+        <div className="blob-3 absolute bottom-[-30%] left-[10%] w-[80vw] h-[60vw] min-w-[500px] min-h-[500px] rounded-full bg-gradient-3 blur-[100px] lg:blur-[180px] mix-blend-normal transition-colors duration-1000 ease-in-out" />
+      </div>
       
       {/* Gigantic Watermark Logo */}
-      <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none overflow-hidden mix-blend-multiply dark:mix-blend-screen">
+      <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none overflow-hidden" style={{ mixBlendMode: 'var(--watermark-blend)' as any }}>
         <img 
           src="/favLogo.png" 
           alt="" 
-          className="w-[150vw] sm:w-[80vw] lg:w-[60vw] max-w-[1200px] opacity-[0.02] dark:opacity-[0.03] grayscale dark:invert transition-all duration-700 ease-in-out object-contain blur-[2px] dark:blur-[1px]" 
+          className="w-[150vw] sm:w-[80vw] lg:w-[60vw] max-w-[1200px] transition-all duration-700 ease-in-out object-contain blur-[2px] dark:blur-[1px] grayscale" 
+          style={{ 
+            opacity: 'var(--watermark-opacity)',
+            filter: `invert(var(--watermark-invert))` 
+          }}
         />
       </div>
 

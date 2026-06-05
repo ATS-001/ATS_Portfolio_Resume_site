@@ -40,7 +40,7 @@ export default function Interests() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-50 dark:bg-white/[0.03] border border-zinc-200 dark:border-white/5 backdrop-blur-md cursor-default hover:bg-zinc-100 dark:hover:bg-white/[0.06] transition-all shadow-sm dark:shadow-none"
+              className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card border border-border backdrop-blur-md cursor-default hover:bg-black/5 dark:hover:bg-white/[0.06] transition-all shadow-sm dark:shadow-none"
             >
               <interest.icon className={`w-5 h-5 ${interest.color}`} />
               <span className="text-lg font-medium dark:text-zinc-200 text-zinc-800">{interest.name}</span>

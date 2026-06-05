@@ -68,7 +68,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-6 rounded-3xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/5 hover:border-zinc-300 dark:hover:border-white/10 transition-colors group backdrop-blur-sm"
+              className="p-6 rounded-3xl bg-card border border-border backdrop-blur-md shadow-sm dark:shadow-none hover:border-black/20 dark:hover:border-white/20 transition-colors group"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2.5 rounded-xl bg-white dark:bg-white/5 border border-zinc-100 dark:border-white/10 group-hover:scale-110 transition-transform shadow-sm dark:shadow-none">

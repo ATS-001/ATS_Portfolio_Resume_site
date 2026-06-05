@@ -51,7 +51,7 @@ export default function ContactPage() {
           
           {/* Main Contact Card */}
           <motion.div 
-            className="lg:col-span-3 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 md:p-12 shadow-sm relative overflow-hidden group"
+            className="lg:col-span-3 bg-card text-card-foreground border border-border rounded-3xl p-8 md:p-12 shadow-sm relative overflow-hidden group"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -97,7 +97,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 shadow-sm">
+            <div className="bg-card text-card-foreground border border-border rounded-3xl p-8 shadow-sm">
               <h2 className="text-xl font-semibold dark:text-white text-zinc-900 mb-6 tracking-tight">Digital Presence</h2>
               <div className="flex flex-col gap-3">
                 {SOCIAL_LINKS.map((social) => (

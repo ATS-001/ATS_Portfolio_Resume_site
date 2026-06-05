@@ -1,1 +1,45 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-gradient-1: var(--gradient-1);
+  --color-gradient-2: var(--gradient-2);
+  --color-gradient-3: var(--gradient-3);
+}
+
+@layer base {
+  :root, ::before, ::after {
+    --background: #fdfdfd;
+    --foreground: #18181b; /* zinc-900 */
+    --card: rgba(255, 255, 255, 0.75);
+    --border: rgba(0, 0, 0, 0.08);
+    --gradient-1: rgba(244, 244, 245, 0.8); /* zinc-100/80 */
+    --gradient-2: rgba(239, 246, 255, 0.8); /* blue-50/80 */
+    --gradient-3: rgba(255, 247, 237, 0.8); /* orange-50/80 */
+    --watermark-opacity: 0.06;
+    --watermark-invert: 0;
+    --watermark-blend: normal;
+  }
+
+  .dark, .dark ::before, .dark ::after {
+    --background: #09090b; /* zinc-950 */
+    --foreground: #fafafa; /* zinc-50 */
+    --card: rgba(25, 25, 28, 0.6);
+    --border: rgba(255, 255, 255, 0.08);
+    --gradient-1: rgba(15, 23, 42, 0.6); /* slate-900/60 */
+    --gradient-2: rgba(4, 47, 46, 0.4); /* teal-950/40 */
+    --gradient-3: rgba(39, 39, 42, 0.6); /* zinc-800/60 */
+    --watermark-opacity: 0.03;
+    --watermark-invert: 1;
+    --watermark-blend: screen;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}

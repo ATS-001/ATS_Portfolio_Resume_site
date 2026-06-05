@@ -38,7 +38,7 @@ export default function Languages() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 rounded-2xl bg-zinc-50 dark:bg-white/[0.02] border border-zinc-200 dark:border-white/5 hover:border-zinc-300 dark:hover:border-white/10 transition-colors backdrop-blur-sm flex items-start gap-4 group shadow-sm dark:shadow-none"
+              className="p-6 rounded-2xl bg-card border border-border hover:border-black/20 dark:hover:border-white/10 transition-colors backdrop-blur-md flex items-start gap-4 group shadow-sm dark:shadow-none"
             >
               <div className={`p-3 rounded-xl bg-gradient-to-br ${lang.color} bg-opacity-10 shadow-md dark:shadow-lg mt-1 group-hover:scale-110 transition-transform`}>
                 <Globe className="w-6 h-6 text-white drop-shadow-md" />

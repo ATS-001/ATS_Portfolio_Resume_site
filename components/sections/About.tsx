@@ -27,7 +27,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="col-span-1 md:col-span-2 lg:col-span-2 p-8 rounded-3xl bg-zinc-50 dark:bg-white/[0.03] border border-zinc-200 dark:border-white/10 backdrop-blur-sm shadow-sm dark:shadow-none"
+            className="col-span-1 md:col-span-2 lg:col-span-2 p-8 rounded-3xl bg-card border border-border backdrop-blur-md shadow-sm dark:shadow-none"
           >
             <h3 className="text-2xl font-semibold dark:text-white text-zinc-900 mb-6 flex items-center gap-3">
               <User className="text-blue-500 dark:text-blue-400" /> Who I Am
@@ -45,7 +45,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="p-8 rounded-3xl bg-zinc-50 dark:bg-white/[0.03] border border-zinc-200 dark:border-white/10 backdrop-blur-sm flex flex-col justify-center shadow-sm dark:shadow-none"
+            className="p-8 rounded-3xl bg-card border border-border backdrop-blur-md flex flex-col justify-center shadow-sm dark:shadow-none"
           >
             <h3 className="text-2xl font-semibold dark:text-white text-zinc-900 mb-6 flex items-center gap-3">
               <Briefcase className="text-zinc-900 dark:text-zinc-100" /> Roles & Titles

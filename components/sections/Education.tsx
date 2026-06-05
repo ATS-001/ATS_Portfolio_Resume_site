@@ -69,7 +69,7 @@ export default function Education() {
                 <GraduationCap className="w-4 h-4 text-zinc-900 dark:text-zinc-100" />
               </div>
               
-              <div className="p-6 rounded-2xl bg-zinc-50 dark:bg-white/[0.02] hover:bg-zinc-100 dark:hover:bg-white/[0.04] border border-zinc-200 dark:border-white/5 transition-all group backdrop-blur-sm relative overflow-hidden shadow-sm dark:shadow-none">
+              <div className="p-6 rounded-2xl bg-card hover:bg-black/5 dark:hover:bg-white/[0.04] border border-border transition-all group backdrop-blur-md relative overflow-hidden shadow-sm dark:shadow-none">
                 <div className="absolute top-0 right-0 p-4 opacity-5 dark:opacity-10 font-mono text-5xl font-bold text-zinc-900 dark:text-white">
                   {`0${index + 1}`}
                 </div>

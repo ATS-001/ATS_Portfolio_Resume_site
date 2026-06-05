@@ -153,7 +153,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="font-sans antialiased text-zinc-900 bg-white dark:bg-zinc-950 dark:text-zinc-50 min-h-screen selection:bg-blue-500/30 selection:text-white transition-colors duration-700 ease-in-out">
+      <body className="font-sans antialiased bg-background text-foreground min-h-screen selection:bg-blue-500/30 selection:text-white transition-colors duration-700 ease-in-out">
         <ThemeProvider>
           <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[100] px-4 py-2 bg-zinc-900 text-white rounded-md font-medium">
             Skip to main content

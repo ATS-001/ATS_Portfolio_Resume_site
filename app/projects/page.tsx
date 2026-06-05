@@ -271,7 +271,7 @@ export default function ProjectsPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="group relative bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md rounded-3xl border border-zinc-200 dark:border-white/5 overflow-hidden hover:shadow-2xl hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-300 flex flex-col cursor-pointer"
+                className="group relative bg-card backdrop-blur-md rounded-3xl border border-border text-foreground overflow-hidden hover:shadow-2xl hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-300 flex flex-col cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 {/* Glow behind card on hover */}
@@ -350,7 +350,7 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed bottom-0 left-0 right-0 md:bottom-auto md:top-1/2 md:left-1/2 md:right-auto md:-translate-x-1/2 md:-translate-y-1/2 w-full md:w-[768px] md:max-w-[90vw] bg-white dark:bg-zinc-900 rounded-t-3xl md:rounded-3xl shadow-2xl z-50 overflow-hidden border border-zinc-200 dark:border-white/10 max-h-[85vh] flex flex-col pointer-events-auto"
+              className="fixed bottom-0 left-0 right-0 md:bottom-auto md:top-1/2 md:left-1/2 md:right-auto md:-translate-x-1/2 md:-translate-y-1/2 w-full md:w-[768px] md:max-w-[90vw] bg-card text-foreground rounded-t-3xl md:rounded-3xl shadow-2xl z-50 overflow-hidden border border-border max-h-[85vh] flex flex-col pointer-events-auto"
             >
               {/* Modal Header */}
               <div className="p-6 md:p-8 flex items-start justify-between border-b border-zinc-200 dark:border-white/5 bg-zinc-50/50 dark:bg-zinc-800/20">
