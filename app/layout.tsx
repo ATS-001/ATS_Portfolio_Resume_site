@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://aaronsooraj.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://aaronts127pdz.vercel.app'),
   title: {
     default: 'Aaron Thalakkottor Sooraj | Developer Portfolio',
     template: '%s | Aaron Thalakkottor Sooraj'
@@ -99,13 +99,13 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://aaronsooraj.dev/#person",
+      "@id": "https://aaronts127pdz.vercel.app/#person",
       "name": "Aaron Thalakkottor Sooraj",
       "alternateName": ["Aaron T S", "Aaron", "ATS_PDZ"],
       "jobTitle": "Developer",
       "description": "Developer from Kerala, India building creative digital systems and AI platforms.",
-      "image": "https://aaronsooraj.dev/favLogo.png",
-      "url": "https://aaronsooraj.dev",
+      "image": "https://aaronts127pdz.vercel.app/favLogo.png",
+      "url": "https://aaronts127pdz.vercel.app",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Thrissur",
@@ -120,18 +120,18 @@ const structuredData = {
         "https://www.youtube.com/@ats_pdz"
       ],
       "worksFor": {
-        "@id": "https://aaronsooraj.dev/#organization"
+        "@id": "https://aaronts127pdz.vercel.app/#organization"
       },
       "knowsAbout": ["Web Development", "UI/UX Design", "Prompt Engineering", "Artificial Intelligence"]
     },
     {
       "@type": "Organization",
-      "@id": "https://aaronsooraj.dev/#organization",
+      "@id": "https://aaronts127pdz.vercel.app/#organization",
       "name": "ATS_PDZ",
-      "url": "https://aaronsooraj.dev",
-      "logo": "https://aaronsooraj.dev/favLogo.png",
+      "url": "https://aaronts127pdz.vercel.app",
+      "logo": "https://aaronts127pdz.vercel.app/favLogo.png",
       "founder": {
-        "@id": "https://aaronsooraj.dev/#person"
+        "@id": "https://aaronts127pdz.vercel.app/#person"
       },
       "sameAs": [
         "https://x.com/ATSpdz"
@@ -139,12 +139,12 @@ const structuredData = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://aaronsooraj.dev/#website",
-      "url": "https://aaronsooraj.dev",
+      "@id": "https://aaronts127pdz.vercel.app/#website",
+      "url": "https://aaronts127pdz.vercel.app",
       "name": "Aaron Thalakkottor Sooraj | Developer Portfolio",
       "description": "Premium futuristic personal portfolio of Aaron Thalakkottor Sooraj (ATS_PDZ)",
       "publisher": {
-        "@id": "https://aaronsooraj.dev/#organization"
+        "@id": "https://aaronts127pdz.vercel.app/#organization"
       }
     }
   ]
