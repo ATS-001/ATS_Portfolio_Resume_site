@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   creator: 'Aaron Thalakkottor Sooraj',
   publisher: 'ATS_PDZ',
+  verification: {
+    google: 'YdyjQQrxiPXv72EHfQr1Ilffq4IJOtRnqljLC5yKE4s',
+  },
   formatDetection: {
     email: false,
     address: false,
