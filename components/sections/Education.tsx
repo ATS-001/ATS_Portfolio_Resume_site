@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { GraduationCap } from 'lucide-react';
 
-const EDUCATION_DATA = [
+export const EDUCATION_DATA = [
   {
     institution: 'Vidya Academy of Science and Technology, Thrissur',
     course: 'B.Tech in Computer Science Engineering',

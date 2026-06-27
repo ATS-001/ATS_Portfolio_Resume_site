@@ -37,6 +37,15 @@
     --watermark-invert: 1;
     --watermark-blend: screen;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 body {

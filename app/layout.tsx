@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 import Script from 'next/script';
 
 const inter = Inter({
@@ -164,7 +165,7 @@ export default function RootLayout({
           </a>
           <Navbar />
           <div id="main-content" tabIndex={-1} className="outline-none">
-            {children}
+            <PageTransition>{children}</PageTransition>
           </div>
           <Footer />
         </ThemeProvider>

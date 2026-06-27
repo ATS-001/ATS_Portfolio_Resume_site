@@ -13,121 +13,116 @@ const navItems = [
   { name: 'About ATS_PDZ', href: '/about-atspdz' },
   { name: 'Projects', href: '/projects' },
   { name: 'Achievements', href: '/achievements' },
+  { name: 'Gallery', href: '/gallery' },
   { name: 'Contact', href: '/contact' },
   { name: 'Feedback', href: '/feedback' },
 ];
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setMounted(true), 0);
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    setMounted(true);
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-md border-b border-border shadow-sm dark:shadow-none'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tighter">
-            <Image src="/navLogo.png" alt="ATS_PDZ Logo" width={40} height={40} className="object-contain rounded dark:brightness-100" />
-            <span className="hidden sm:inline-block">
-              <span className="text-zinc-900 dark:text-zinc-100">
-                ATS
-              </span>
+    <>
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="fixed top-6 left-0 right-0 z-[100] flex justify-center w-full pointer-events-none"
+      >
+        <div className="pointer-events-auto flex items-center justify-between gap-4 sm:gap-6 px-3 sm:px-4 h-14 rounded-full bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border border-zinc-200/50 dark:border-zinc-800/50 shadow-lg dark:shadow-none transition-colors duration-300 w-[95%] max-w-fit">
+          {/* Logo & Brand */}
+          <Link href="/" className="flex items-center gap-2 pr-2 shrink-0 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full">
+            <div className="w-8 h-8 rounded-full overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <Image src="/navLogo.png" alt="ATS_PDZ Logo" width={32} height={32} className="object-contain dark:brightness-100" />
+            </div>
+            <span className="hidden lg:inline-block font-bold tracking-tighter text-sm">
+              <span className="text-zinc-900 dark:text-zinc-100">ATS</span>
               <span className="text-zinc-400 dark:text-zinc-500">_</span>
               <span className="text-zinc-900 dark:text-white">PDZ</span>
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-4">
+          {/* Desktop Nav Items */}
+          <nav className="hidden lg:flex items-center space-x-1" aria-label="Main navigation">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive 
-                      ? 'text-blue-600 dark:text-blue-400' 
-                      : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/5'
-                  }`}
+                  className="relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 group"
+                  aria-current={isActive ? 'page' : undefined}
                 >
-                  {item.name}
+                  <span className={`relative z-10 transition-colors ${isActive ? 'text-zinc-900 dark:text-white' : 'text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white'}`}>
+                    {item.name}
+                  </span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNavIndicator"
+                      className="absolute inset-0 bg-zinc-100 dark:bg-zinc-800 rounded-full"
+                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    />
+                  )}
                 </Link>
               );
             })}
-            
-            <div className="flex items-center space-x-2 pl-4 border-l border-zinc-200 dark:border-white/10 ml-2">
-              <a
-                href="https://github.com/ATS-001"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/10 rounded-full transition-all flex items-center justify-center group"
-                title="GitHub"
-              >
-                <Github size={20} className="group-hover:scale-110 transition-transform" />
-              </a>
-              
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/10 rounded-full transition-all"
-                  aria-label="Toggle theme"
-                >
-                  {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
-              )}            </div>
           </nav>
 
-          {/* Mobile Menu Button & Controls */}
-          <div className="flex items-center md:hidden space-x-2">
+          {/* Actions */}
+          <div className="flex items-center gap-1 sm:gap-2 pl-2 border-l border-zinc-200 dark:border-zinc-800 shrink-0">
+            <a
+              href="https://github.com/ATS-001/ATS_Portfolio_Resume_site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 sm:p-2.5 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
+              title="GitHub Source"
+              aria-label="View source on GitHub"
+            >
+              <Github size={18} className="sm:w-5 sm:h-5 transition-transform" />
+            </a>
+            
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
-                aria-label="Toggle theme"
+                className="p-2 sm:p-2.5 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+                title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
               >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                {theme === 'dark' ? <Sun size={18} className="sm:w-5 sm:h-5" /> : <Moon size={18} className="sm:w-5 sm:h-5" />}
               </button>
             )}
+
+            {/* Mobile Menu Toggle */}
             <button
-              className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+              className="lg:hidden p-2 sm:p-2.5 ml-1 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-expanded={isMobileMenuOpen}
+              aria-label="Toggle navigation menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
-      </div>
+      </motion.header>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border overflow-hidden"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm z-[90] bg-white/90 dark:bg-zinc-950/90 backdrop-blur-2xl border border-zinc-200/50 dark:border-zinc-800/50 shadow-2xl rounded-3xl overflow-hidden lg:hidden"
           >
-            <div className="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+            <div className="p-4 space-y-1">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
@@ -135,32 +130,21 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block px-3 py-3 rounded-xl text-base font-medium ${
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`block px-4 py-3 rounded-2xl text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                       isActive
-                        ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                        : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-white/5'
+                        ? 'bg-blue-50/80 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
+                        : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/50'
                     }`}
                   >
                     {item.name}
                   </Link>
                 );
               })}
-              <div className="pt-4 mt-2 border-t border-zinc-200 dark:border-white/10 flex items-center justify-between px-3">
-                <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Social</span>
-                <a
-                  href="https://github.com/ATS-001"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 dark:bg-white/10 text-sm font-medium hover:bg-zinc-200 dark:hover:bg-white/20 transition-colors"
-                >
-                  <Github size={16} />
-                  GitHub Profile
-                </a>
-              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   );
 }

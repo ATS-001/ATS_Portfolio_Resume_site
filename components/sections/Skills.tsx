@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Code2, PenTool, Database, Sparkles, Briefcase, Globe } from 'lucide-react';
 
-const SKILL_CATEGORIES = [
+export const SKILL_CATEGORIES = [
   {
     title: 'Programming',
     icon: Code2,

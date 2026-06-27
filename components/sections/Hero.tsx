@@ -76,9 +76,9 @@ export default function Hero() {
               <Link href="/contact" className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-black/5 dark:bg-white/5 text-zinc-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors border border-black/10 dark:border-white/10 backdrop-blur-md flex items-center justify-center gap-2">
                 Contact Me
               </Link>
-              <a href="#" className="w-full sm:w-auto p-3.5 rounded-full bg-black/5 dark:bg-white/5 text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors border border-black/10 dark:border-white/10 backdrop-blur-md flex items-center justify-center group" title="Download Resume">
+              <Link href="/resume" className="w-full sm:w-auto p-3.5 rounded-full bg-black/5 dark:bg-white/5 text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors border border-black/10 dark:border-white/10 backdrop-blur-md flex items-center justify-center group" title="Download Resume">
                 <Download className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
+              </Link>
             </div>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">

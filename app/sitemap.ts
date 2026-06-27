@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/accessibility',
     '/privacy-policy',
     '/terms-and-conditions',
+    '/cookie-policy',
+    '/disclaimer',
+    '/achievements',
+    '/gallery'
   ];
 
   return routes.map((route) => ({

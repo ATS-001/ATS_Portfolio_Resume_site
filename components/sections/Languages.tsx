@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Languages as LanguagesIcon, Globe } from 'lucide-react';
 
-const LANGUAGES = [
+export const LANGUAGES = [
   { name: 'Malayalam', level: 'Native/Bilingual', color: 'from-blue-600 to-blue-500' },
   { name: 'German', level: 'Native/Bilingual', color: 'from-zinc-600 to-zinc-500' },
   { name: 'English', level: 'Professional Working', color: 'from-zinc-800 to-zinc-700' },

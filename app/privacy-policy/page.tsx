@@ -33,8 +33,8 @@ export default function PrivacyPolicyPage() {
             Privacy <span className="text-zinc-400 dark:text-zinc-500">Policy</span>
           </h1>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
-            Effective Date: May 17, 2026<br />
-            Last Updated: May 17, 2026
+            Effective Date: June 14, 2026<br />
+            Last Updated: June 14, 2026
           </p>
         </motion.div>
 
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
                <div>
                   <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">B. Automated Data & Analytics</h3>
                   <p>
-                     This website may use basic analytics tools (such as Vercel Analytics) to understand website performance and visitor geography. This data is aggregated and does not identify you personally. It may include your browser type, device type, and referring URLs.
+                     This website uses analytics tools, including Google Analytics and Vercel Analytics, to understand website performance, visitor geography, and engagement. This data is aggregated and does not identify you personally. It may include your browser type, device type, referring URLs, and interaction with the site. The site is hosted on Vercel, which also collects basic server logs.
                   </p>
                </div>
             </div>

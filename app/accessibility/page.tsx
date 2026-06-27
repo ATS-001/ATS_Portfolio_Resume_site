@@ -31,6 +31,10 @@ export default function AccessibilityPage() {
             Accessibility <br/>
             <span className="text-zinc-400 dark:text-zinc-500">Statement</span>
           </h1>
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium mb-4">
+            Effective Date: June 14, 2026<br />
+            Last Updated: June 14, 2026
+          </p>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
             I am committed to ensuring digital accessibility for people with disabilities. 
             I am continually improving the user experience for everyone and applying the relevant accessibility standards.

@@ -1,20 +1,117 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Aaron Thalakkottor Sooraj | Portfolio Website
+## ATS_PDZ Portfolio
+A futuristic, AI-assisted personal portfolio showcasing my journey as a Computer Science Engineering student, developer, founder, and creative technologist.
+Live Website: aaronts127pdz.vercel.app
 
-# Run and deploy your AI Studio app
+## 📌 About
+This repository contains the source code for my official portfolio website. The portfolio serves as a central hub for my:
+* Education & Technical Skills
+* Projects & Certifications
+* Achievements & Organizations
+* Gallery, Resume, & Contact Information
 
-This contains everything you need to run your app locally.
+The website is designed to be modern, responsive, accessible, and continuously updated as my academic and professional journey evolves.
 
-View your app in AI Studio: https://ai.studio/apps/3a640015-be2a-40ac-9313-05bd83426268
+## ✨ Features
+* Design & UI: Modern futuristic UI, Dark mode, Smooth animations (via Framer Motion), and Responsive design.
+* Interactive Elements: Project showcase, Skills dashboard, Certification gallery, and Achievement timeline.
+* Dashboards & Profiles: Organization profiles, Gallery, and Contact section.
+* Optimization: SEO optimized, Performance optimized, and Accessible design.
+* Integrations: Resume download, Google Analytics, and Google Search Console.
 
-## Run Locally
+## 🛠️ Tech Stack
+| Category | Technologies Used |
+| :--- | :--- |
+| Frontend | Next.js 15, React, TypeScript, Tailwind CSS, Framer Motion |
+| AI Integration | Google AI Studio, Google Gemini, Prompt Engineering |
+| Deployment | Vercel |
+| Analytics & SEO | Google Analytics 4, Google Search Console |
 
-**Prerequisites:**  Node.js
+## 📁 Folder Structure
+```plaintext
+├── app/
+├── components/
+├── public/
+├── hooks/
+├── lib/
+├── styles/
+└── types/
+```
 
+## 🗺️ Website Sections
+* Home / About Me / About ATS_PDZ
+* Projects / Achievements / Gallery
+* Organizations / Contact
+* Privacy Policy / Terms & Conditions / Disclaimer
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🏫 Education
+**Vidya Academy of Science and Technology**
+Bachelor of Technology (B.Tech) in Computer Science and Engineering
+Timeline: 2025 – 2029
+
+## 🏢 Organizations
+* ATS_PDZ – Founder
+* CommunityWATS (C-WATS) – Founder
+* HexnicAI – Founder
+* StudyAI – Co-Founder
+
+## 🚀 Project Highlights
+Some projects showcased on the website include:
+* Vaazhas
+* Energy Consumption and Conservation App (ECCA)
+* Search&Call
+Additional academic and personal projects are detailed directly within the website.
+
+## 💻 Installation & Setup
+
+Clone the repository
+```bash
+git clone <repository-url>
+```
+
+Install dependencies
+```bash
+npm install
+```
+
+Configure environment variables
+Create a `.env.local` file in the root directory and add your Gemini API key:
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+Run the development server
+```bash
+npm run dev
+```
+
+Build for production
+```bash
+npm run build
+```
+
+## 📈 Performance & Optimization
+* Optimized assets & responsive images
+* Lazy loading
+* Modern Next.js routing
+* SEO metadata & accessibility enhancements
+
+## 🔮 Future Improvements
+* Dynamic resume generation & Project filtering
+* Personal Blog & Interactive achievement timeline
+* Interactive certifications & AI-powered search
+* Admin dashboard & Visitor analytics
+
+## 🤝 Contributing & License
+Contributing: This repository is maintained by Aaron Thalakkottor Sooraj. External contributions are not currently accepted.
+License: This project is intended as a personal portfolio. All original content, branding, images, and project descriptions are copyrighted by the author unless otherwise stated.
+
+## 📞 Contact
+* Email: aaronsooraj001@gmail.com
+* GitHub: @ATS-001
+* LinkedIn: aaronts127pdz
+
+Made with ❤️ using Next.js, Tailwind CSS, Framer Motion, and Google AI Studio.
+
+## 👤 Author
+**Aaron Thalakkottor Sooraj** - B.Tech Computer Science & Engineering Student

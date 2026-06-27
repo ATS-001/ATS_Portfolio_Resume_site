@@ -31,6 +31,10 @@ export default function TermsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold dark:text-white text-zinc-900 mb-6 tracking-tight">
             Terms & <span className="text-zinc-400 dark:text-zinc-500">Conditions</span>
           </h1>
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+            Effective Date: June 14, 2026<br />
+            Last Updated: June 14, 2026
+          </p>
         </motion.div>
 
         <motion.div 
