@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import ParticleBackground from '@/components/ParticleBackground';
-import { Github, ExternalLink, Search, X, Users, Code, LayoutGrid, Tag, Info } from 'lucide-react';
+import { Github, ExternalLink, Search, X, Users, Code, LayoutGrid, Tag, Info, Figma } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 import { PROJECTS, Project, ProjectStatus } from '@/data/projects';
@@ -318,6 +318,16 @@ export default function ProjectsPage() {
                          className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-xl font-semibold border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all active:scale-95"
                        >
                          <Github size={18} /> Source Code
+                       </a>
+                    )}
+                    {selectedProject.figma && (
+                       <a 
+                         href={selectedProject.figma} 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-xl font-semibold border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all active:scale-95"
+                       >
+                         <Figma size={18} /> Figma Design
                        </a>
                     )}
                   </div>

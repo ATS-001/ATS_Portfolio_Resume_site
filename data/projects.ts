@@ -12,6 +12,7 @@ export type Project = {
   status: ProjectStatus;
   github?: string;
   live?: string;
+  figma?: string;
   categories: string[];
 };
 
@@ -36,6 +37,57 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/ATS-001/Cat-Detector-ats",
     live: "https://cat-detector-ats001.streamlit.app/",
     categories: ["AI/ML", "Web Development", "Computer Vision"]
+  },
+  {
+    id: "premium-culinary-demo",
+    title: "Premium Culinary {food app demo}",
+    description: "Welcome to The Ember Classic burger details screen project. This high-fidelity mobile application interface was designed as part of the UI/UX Design Challenge (24hrs) for the \"Introduction to UI/UX\" workshop hosted by Muhammed Farseen (SWE @TCS) and MuLearn TLY, held on June 28, 2026.",
+    techStack: ["UI/UX", "Google aistudio", "figma"],
+    status: "Completed",
+    github: "https://github.com/ATS-001/food-uiuxmulearnatsdemo",
+    live: "https://oracvlvm-ats.streamlit.app/",
+    figma: "https://www.figma.com/design/tpPX0CRzQi6Rzg3RW810Iu/food-uiuxmulearnatsdemo?node-id=0-1&t=BDEebVbMyfEsnbHL-1",
+    categories: ["UI/UX", "Design", "Mobile App Interface"]
+  },
+  {
+    id: "oracvlvm-ats",
+    title: "ORACVLVM",
+    description: "Day 6 of Projectathon conducted by μLearn LBSITW, AI x DS {3rd July 2026} An end-to-end Machine Learning web application designed as an interactive decision support tool to simulate and predict the statistical probability of national football squads reaching the tournament Quarter-Finals. By leveraging a trained Random Forest Classifier Ensemble, the system evaluates core team dynamics, squad valuations, and historical metrics to generate predictive analytics instantly.",
+    techStack: ["UI/UX", "Python", "Streamlit", "langchain"],
+    status: "Completed",
+    github: "https://github.com/ATS-001/ORACVLVM-ats",
+    live: "https://oracvlvm-ats.streamlit.app/",
+    categories: ["AI/ML", "Predictive Analytics", "Web Development", "Sports Analytics"]
+  },
+  {
+    id: "tutoscript-ats",
+    title: "TutoScript",
+    description: "Day 5 of Projectathon conducted by μLearn LBSITW, AI x DS {1st July 2026} An efficient, modular Retrieval-Augmented Generation (RAG) dashboard designed to parse YouTube video transcripts, index text segments into a local vector storage unit, and generate real-time contextual question-answering streams alongside synchronized video playback.",
+    techStack: ["UI/UX", "Python", "Streamlit", "langchain"],
+    status: "Completed",
+    github: "https://github.com/ATS-001/TutoScript-ats/",
+    live: "Local Deployment Model",
+    categories: ["AI/ML", "NLP", "Educational Technology", "Web Development"]
+  },
+  {
+    id: "mental-health-screening-survey-mhss",
+    title: "Mental-Health-Screening-Survey-MHSS",
+    description: "Day 4 of Projectathon conducted by μLearn LBSITW, AI x DS {29th June 2026} An efficient, lightweight machine learning classification dashboard designed to process multi-dimensional wellness metrics, vectorize natural language text representations, and evaluate potential indicators of emotional distress with live probabilistic confidence tracking.",
+    techStack: ["UI/UX", "Jupyter Notebook", "Python", "Streamlit", "CSV", "Google Colab"],
+    status: "Completed",
+    github: "https://github.com/ATS-001/Mental-Health-Screening-Survey-MHSS-",
+    live: "https://mhss-ats001.streamlit.app/",
+    categories: ["AI/ML", "Healthcare", "Data Science", "Web Development"]
+  },
+  {
+    id: "edu-rag-terminalexe",
+    title: "Edu-RAG-Terminal.exe",
+    description: "Day 3 of Projectathon conducted by μLearn LBSITW, AI x DS {26th June 2026} An efficient, modular RAG dashboard designed to parse dense PDF documents, index text segments into a local vector storage unit, and generate contextual study summaries and interactive evaluation quizzes seamlessly.",
+    techStack: ["UI/UX", "Python", "Streamlit", "langchain"],
+    status: "Completed",
+    github: "https://github.com/ATS-001/Edu-RAG-Terminal.exe/",
+    live: "https://edu-rag-terminalexe-ats001.streamlit.app/",
+    categories: ["AI/ML", "NLP", "Web Development", "Educational Technology"]
   },
   {
     id: "vaazhas",

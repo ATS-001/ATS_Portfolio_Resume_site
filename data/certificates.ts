@@ -21,6 +21,15 @@ export interface Certificate {
 
 export const certificatesData: Certificate[] = [
   {
+    id: "inclusive-societies-stride",
+    title: "Inclusive Societies Through Strategic Innovation",
+    organization: "STRIDE FORWARD",
+    issueDate: "Jun 2026",
+    credentialId: "STRIDE-26-0626",
+    skills: ["Strategic Innovation"],
+    category: "Workshops & Webinars",
+  },
+  {
     id: "prakruthi-frame-poster",
     title: "Prakruthi Frame - Poster Making Competition",
     organization: "IEEE SB AJCE",

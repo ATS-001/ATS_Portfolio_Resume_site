@@ -111,13 +111,13 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="relative w-[90%] aspect-[3/4] max-w-md mx-auto">
               {/* Subtle background layer instead of bright neon blur */}
-              <div className="absolute inset-0 bg-zinc-100/50 dark:bg-zinc-900/50 rounded-full blur-3xl" />
-              <div className="absolute inset-4 border border-zinc-200/80 dark:border-zinc-800 rounded-full border-dashed animate-[spin_40s_linear_infinite]" />
+              <div className="absolute inset-0 bg-zinc-100/50 dark:bg-zinc-900/50 rounded-[3.5rem] blur-3xl" />
+              <div className="absolute inset-4 border border-zinc-200/80 dark:border-zinc-800 rounded-[2.5rem] border-dashed animate-[spin_40s_linear_infinite]" />
               
               <div className="absolute inset-8">
-                 <EditorialPortrait imageSrc="/portrait.png.png" />
+                 <EditorialPortrait imageSrc="/portrait.jpeg" />
               </div>
             </div>
           </motion.div>
