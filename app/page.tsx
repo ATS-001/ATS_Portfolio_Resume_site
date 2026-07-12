@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import ParticleBackground from '@/components/ParticleBackground';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
@@ -43,6 +44,7 @@ export default function Home() {
             {/* Project Card Placeholder 1 */}
             <div className="bg-card border border-border rounded-3xl p-6 hover:shadow-lg transition-all shadow-sm text-foreground">
               <div className="aspect-video bg-zinc-100 dark:bg-zinc-900 rounded-2xl mb-4 overflow-hidden relative group">
+                <Image src="/search_call.jpg" alt="Search&Call" fill className="object-cover" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-zinc-200/50 dark:bg-zinc-800/50 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <h3 className="text-xl font-semibold dark:text-white text-zinc-900 mb-2 tracking-tight">Search&amp;Call</h3>
@@ -56,6 +58,7 @@ export default function Home() {
             {/* Project Card Placeholder 2 */}
             <div className="bg-card border border-border rounded-3xl p-6 hover:shadow-lg transition-all shadow-sm text-foreground">
               <div className="aspect-video bg-zinc-100 dark:bg-zinc-900 rounded-2xl mb-4 overflow-hidden relative group">
+                <Image src="/vaazhas.jpg" alt="Vaazhas" fill className="object-cover" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-zinc-200/50 dark:bg-zinc-800/50 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <h3 className="text-xl font-semibold dark:text-white text-zinc-900 mb-2 tracking-tight">Vaazhas</h3>
@@ -69,6 +72,7 @@ export default function Home() {
             {/* Project Card Placeholder 3 */}
             <div className="bg-card border border-border rounded-3xl p-6 hover:shadow-lg transition-all shadow-sm text-foreground">
               <div className="aspect-video bg-zinc-100 dark:bg-zinc-900 rounded-2xl mb-4 overflow-hidden relative group">
+                <Image src="/study_ai.jpg" alt="StudyAI" fill className="object-cover" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-zinc-200/50 dark:bg-zinc-800/50 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <h3 className="text-xl font-semibold dark:text-white text-zinc-900 mb-2 tracking-tight">StudyAI</h3>

@@ -8,13 +8,13 @@ export const SKILL_CATEGORIES = [
   {
     title: 'Programming',
     icon: Code2,
-    skills: ['Python', 'C', 'HTML', 'CSS', 'JavaScript', 'C#'],
+    skills: ['Python', 'C', 'HTML', 'CSS', 'JavaScript', 'C#', 'Java', 'Linux Shell Script'],
     color: 'text-blue-500 dark:text-blue-400'
   },
   {
     title: 'AI Tools',
     icon: Sparkles,
-    skills: ['ChatGPT', 'Gemini', 'Suno', 'Websim.ai', 'AI Studio', 'V0', 'Lovable'],
+    skills: ['ChatGPT', 'Gemini', 'Suno', 'Websim.ai', 'AI Studio', 'V0', 'Lovable', 'Antigravity', 'Flow'],
     color: 'text-zinc-600 dark:text-zinc-400'
   },
   {
@@ -34,6 +34,12 @@ export const SKILL_CATEGORIES = [
     icon: Briefcase,
     skills: ['Microsoft Office', 'Google Workspace'],
     color: 'text-yellow-600 dark:text-yellow-500'
+  },
+  {
+    title: 'Deployments & Tools',
+    icon: Globe,
+    skills: ['Vercel', 'Streamlit', 'GitHub', 'VS Code'],
+    color: 'text-purple-500 dark:text-purple-400'
   },
   {
     title: 'Professional Skills',
@@ -68,7 +74,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-6 rounded-3xl bg-card border border-border backdrop-blur-md shadow-sm dark:shadow-none hover:border-black/20 dark:hover:border-white/20 transition-colors group"
+              className={`p-6 rounded-3xl bg-card border border-border backdrop-blur-md shadow-sm dark:shadow-none hover:border-black/20 dark:hover:border-white/20 transition-colors group ${category.title === "Professional Skills" ? "md:col-span-2 lg:col-span-3" : ""}`}
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2.5 rounded-xl bg-white dark:bg-white/5 border border-zinc-100 dark:border-white/10 group-hover:scale-110 transition-transform shadow-sm dark:shadow-none">
