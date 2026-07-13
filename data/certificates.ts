@@ -21,6 +21,14 @@ export interface Certificate {
 
 export const certificatesData: Certificate[] = [
   {
+    id: "intro-ui-ux-workshop",
+    title: "Introduction to UI/UX Workshop",
+    organization: "Mulearn TLY",
+    issueDate: "Jun 2026",
+    skills: ["UIX", "Web Design"],
+    category: "Workshops & Webinars",
+  },
+  {
     id: "inclusive-societies-stride",
     title: "Inclusive Societies Through Strategic Innovation",
     organization: "STRIDE FORWARD",

@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     techStack: ["UI/UX", "Google aistudio", "figma"],
     status: "Completed",
     github: "https://github.com/ATS-001/food-uiuxmulearnatsdemo",
-    live: "https://oracvlvm-ats.streamlit.app/",
+    live: "https://food-uiuxmulearnatsdemo-1066462013141.asia-south1.run.app/",
     figma: "https://www.figma.com/design/tpPX0CRzQi6Rzg3RW810Iu/food-uiuxmulearnatsdemo?node-id=0-1&t=BDEebVbMyfEsnbHL-1",
     categories: ["UI/UX", "Design", "Mobile App Interface"]
   },
@@ -170,7 +170,7 @@ export const PROJECTS: Project[] = [
     techStack: ["React", "Next.js", "Tailwind CSS", "Vercel", "V0 by Vercel", "lovable", "websim.ai", "Google AI Studio"],
     status: "Ongoing",
     github: "https://github.com/ATS-001/ATS_Portfolio_Resume_site",
-    live: "https://ats-pdz.vercel.app/",
+    live: "https://aaronts127pdz.vercel.app/",
     categories: ["Web Development", "Creative Media", "Portfolio"]
   }
 ];
