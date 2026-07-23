@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import CertificateDeck from "@/components/CertificateDeck";
+import { certificatesData } from "@/data/certificates";
 import { Award, Sparkles, Linkedin, ExternalLink } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
 
@@ -34,6 +35,10 @@ export default function AchievementsPage() {
             <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
               Track Record
             </span>
+          </div>
+          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 font-semibold text-sm mb-6 shadow-sm">
+            <Award className="w-4 h-4 text-blue-500" />
+            <span>Total Achievements & Certifications: <strong className="text-zinc-900 dark:text-white font-bold">{certificatesData.length}</strong></span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold dark:text-white text-zinc-900 mb-6 tracking-tight flex items-center justify-center gap-4">

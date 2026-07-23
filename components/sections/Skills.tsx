@@ -8,19 +8,19 @@ export const SKILL_CATEGORIES = [
   {
     title: 'Programming',
     icon: Code2,
-    skills: ['Python', 'C', 'HTML', 'CSS', 'JavaScript', 'C#', 'Java', 'Linux Shell Script'],
+    skills: ['Python', 'C', 'HTML', 'XHTML', 'CSS', 'JavaScript', 'C#', 'Java', 'Linux Shell Script', 'Scratch'],
     color: 'text-blue-500 dark:text-blue-400'
   },
   {
     title: 'AI Tools',
     icon: Sparkles,
-    skills: ['ChatGPT', 'Gemini', 'Suno', 'Websim.ai', 'AI Studio', 'V0', 'Lovable', 'Antigravity', 'Flow'],
+    skills: ['ChatGPT', 'Gemini', 'Groq', 'Copilot', 'Vibe Coding', 'Suno', 'Websim.ai', 'AI Studio', 'V0', 'Lovable', 'Antigravity', 'Flow'],
     color: 'text-zinc-600 dark:text-zinc-400'
   },
   {
     title: 'Web & Design',
     icon: Globe,
-    skills: ['Google Sites', 'Figma (Basics)', 'Google Stitch', 'Canva', 'Clipchamp', 'BandLab', 'Quillbot'],
+    skills: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Google Sites', 'Figma (Basics)', 'Google Stitch', 'Canva', 'Clipchamp', 'BandLab', 'Quillbot'],
     color: 'text-red-500 dark:text-red-400'
   },
   {
@@ -38,7 +38,7 @@ export const SKILL_CATEGORIES = [
   {
     title: 'Deployments & Tools',
     icon: Globe,
-    skills: ['Vercel', 'Streamlit', 'GitHub', 'VS Code'],
+    skills: ['Vercel', 'Streamlit', 'GitHub', 'VS Code', 'Google Search Console', 'Google Analytics'],
     color: 'text-purple-500 dark:text-purple-400'
   },
   {

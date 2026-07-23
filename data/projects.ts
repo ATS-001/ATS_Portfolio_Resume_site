@@ -1,4 +1,4 @@
-export type ProjectStatus = "Completed" | "Ongoing" | "Under Development" | "Active Development" | "Completed (Archived)";
+export type ProjectStatus = "Completed" | "Ongoing" | "Under Development" | "Active Development" | "Completed (Archived)" | "Continuous Integration / Continuous Deployment (CI/CD)";
 
 export type Project = {
   id: string;
@@ -160,7 +160,9 @@ export const PROJECTS: Project[] = [
     description: "AI-based personalized and inclusive learning ecosystem covering multiple subjects.",
     organization: "Brother organization to HexnicAI",
     techStack: ["UI/UX", "Google AI Studio", "Prompt Engineering", "Vercel Deployment"],
-    status: "Under Development",
+    status: "Continuous Integration / Continuous Deployment (CI/CD)",
+    github: "https://github.com/ATS-001/Community-WebsiteATS",
+    live: "https://c-wats.vercel.app/",
     categories: ["Educational Technology", "AI Tools", "Experimental Platform"]
   },
   {
