@@ -1,10 +1,10 @@
-# Aaron Thalakkottor Sooraj | Portfolio Website
-## ATS_PDZ Portfolio
-A futuristic, AI-assisted personal portfolio showcasing my journey as a Computer Science Engineering student, developer, founder, and creative technologist.
+# ATS Developer Dossier
+## ATS_PDZ Dossier
+A futuristic, AI-assisted personal dossier showcasing my journey as a Computer Science Engineering student, developer, founder, and creative technologist.
 Live Website: aaronts127pdz.vercel.app
 
 ## 📌 About
-This repository contains the source code for my official portfolio website. The portfolio serves as a central hub for my:
+This repository contains the source code for my official dossier website. The dossier serves as a central hub for my:
 * Education & Technical Skills
 * Projects & Certifications
 * Achievements & Organizations
@@ -104,7 +104,7 @@ npm run build
 
 ## 🤝 Contributing & License
 Contributing: This repository is maintained by Aaron Thalakkottor Sooraj. External contributions are not currently accepted.
-License: This project is intended as a personal portfolio. All original content, branding, images, and project descriptions are copyrighted by the author unless otherwise stated.
+License: This project is intended as a personal dossier. All original content, branding, images, and project descriptions are copyrighted by the author unless otherwise stated.
 
 ## 📞 Contact
 * Email: aaronsooraj001@gmail.com

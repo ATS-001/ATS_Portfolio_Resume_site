@@ -47,18 +47,18 @@ export default function TermsPage() {
           <section className="bg-white/60 dark:bg-zinc-900/40 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
             <p>
-               By accessing and viewing this personal portfolio website (ATS-PDZ), you accept and agree to be bound by the terms and provisions of this agreement. 
+               By accessing and viewing this personal dossier website (ATS-PDZ), you accept and agree to be bound by the terms and provisions of this agreement. 
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">2. Intellectual Property & Usage</h2>
             <p className="mb-4">
-               All original content, designs, texts, and source code associated with this specific portfolio website are the intellectual property of Aaron Thalakkottor Sooraj unless otherwise noted.
+               All original content, designs, texts, and source code associated with this specific dossier website are the intellectual property of Aaron Thalakkottor Sooraj unless otherwise noted.
             </p>
             <ul className="list-disc pl-6 space-y-2 marker:text-zinc-400">
-               <li>You may not reproduce, distribute, or create derivative works from the original portfolio design without explicit permission.</li>
-               <li>Open-source projects linked in the portfolio follow their respective repository licenses (e.g., MIT, Apache).</li>
+               <li>You may not reproduce, distribute, or create derivative works from the original dossier design without explicit permission.</li>
+               <li>Open-source projects linked in the dossier follow their respective repository licenses (e.g., MIT, Apache).</li>
                <li>Unauthorized cloning or reposting of this website&apos;s content for commercial gain is strictly prohibited.</li>
             </ul>
           </section>
@@ -67,7 +67,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">3. Project Showcase Rights</h2>
             <p>
                The projects displayed in the &apos;Projects&apos; directory represent my personal work, collaborative efforts, or organizational contributions (e.g., HexnicAI, CommunityWATS). 
-               Trademarks, logos, and names of third-party organizations shown in relation to projects belong to their respective owners and are used purely for demonstrative and portfolio purposes.
+               Trademarks, logos, and names of third-party organizations shown in relation to projects belong to their respective owners and are used purely for demonstrative and dossier purposes.
             </p>
           </section>
 

@@ -168,11 +168,11 @@ export const PROJECTS: Project[] = [
   {
     id: "portfolio",
     title: "ATS_Portfolio_Resume_site",
-    description: "Next-gen portfolio with a glassmorphism futuristic interface featuring dynamic AI tools integration and structured navigation.",
+    description: "Next-gen dossier with a glassmorphism futuristic interface featuring dynamic AI tools integration and structured navigation.",
     techStack: ["React", "Next.js", "Tailwind CSS", "Vercel", "V0 by Vercel", "lovable", "websim.ai", "Google AI Studio"],
     status: "Ongoing",
     github: "https://github.com/ATS-001/ATS_Portfolio_Resume_site",
     live: "https://aaronts127pdz.vercel.app/",
-    categories: ["Web Development", "Creative Media", "Portfolio"]
+    categories: ["Web Development", "Creative Media", "Dossier"]
   }
 ];

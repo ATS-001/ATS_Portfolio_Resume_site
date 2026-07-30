@@ -18,7 +18,7 @@ export default function GalleryPage() {
         <header className="mb-12 text-center max-w-3xl mx-auto flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md mb-6">
             <Sparkles className="w-4 h-4 text-pink-500" />
-            <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200">Visual Portfolio</span>
+            <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200">Visual Dossier</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold dark:text-white text-zinc-900 mb-6 tracking-tight flex items-center justify-center gap-4">

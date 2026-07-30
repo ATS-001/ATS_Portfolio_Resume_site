@@ -59,7 +59,7 @@ export default function FeedbackPage() {
             Share Your <span className="text-zinc-900 dark:text-zinc-100">Feedback</span>
           </h1>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
-            Your insights propel this portfolio forward. Tell me what stood out, what could improve, or just drop a friendly note.
+            Your insights propel this dossier forward. Tell me what stood out, what could improve, or just drop a friendly note.
           </p>
         </motion.div>
 

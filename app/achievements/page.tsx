@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Achievements & Certifications | Aaron Sooraj',
     description: 'Explore certifications, hackathons, innovation programs, courses, and technical achievements earned by Aaron Sooraj.',
     url: 'https://aaronts127pdz.vercel.app/achievements',
-    siteName: 'Aaron Thalakkottor Sooraj | Developer Portfolio',
+    siteName: 'ATS Developer Dossier',
     type: 'website',
   },
   twitter: {

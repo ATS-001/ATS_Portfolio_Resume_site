@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-6">1. Introduction</h2>
             <p className="mb-4">
                Welcome to ATS-PDZ by Aaron Thalakkottor Sooraj. This Privacy Policy outlines how your information is collected, 
-               used, and protected when you visit this personal portfolio website. 
+               used, and protected when you visit this personal dossier website. 
             </p>
             <p>
                My primary goal is to showcase my digital projects, creative media, and web development skills. 
@@ -78,7 +78,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">3. External Links & Third-Party Platforms</h2>
             <p className="mb-4">
-               This portfolio actively links to external services and projects, including:
+               This dossier actively links to external services and projects, including:
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4 marker:text-zinc-400">
                <li>GitHub repositories</li>
@@ -104,7 +104,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">5. Cookies</h2>
             <p>
                This website uses minimal cookies primarily for functional purposes (like preserving your theme preference between Light and Dark mode). 
-               No aggressive tracking cookies are deployed by this core portfolio application.
+               No aggressive tracking cookies are deployed by this core dossier application.
             </p>
           </section>
 

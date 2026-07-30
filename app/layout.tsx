@@ -25,14 +25,14 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://aaronts127pdz.vercel.app'),
   title: {
-    default: 'Aaron Thalakkottor Sooraj | Developer Portfolio',
-    template: '%s | Aaron Thalakkottor Sooraj'
+    default: 'ATS Developer Dossier',
+    template: '%s | ATS Developer Dossier'
   },
-  description: 'Premium futuristic personal portfolio of Aaron Thalakkottor Sooraj (ATS_PDZ), a developer from Kerala, India building creative digital systems and AI platforms.',
-  applicationName: 'ATS_PDZ Portfolio',
+  description: 'Premium futuristic personal dossier of Aaron Thalakkottor Sooraj (ATS_PDZ), a developer from Kerala, India building creative digital systems and AI platforms.',
+  applicationName: 'ATS_PDZ Dossier',
   authors: [{ name: 'Aaron Thalakkottor Sooraj', url: 'https://github.com/ATS-001' }],
   generator: 'Next.js',
-  keywords: ['Aaron Thalakkottor Sooraj', 'Aaron T S', 'ATS_PDZ', 'Aaron developer Kerala', 'Aaron portfolio', 'ATS_PDZ developer', 'Aaron web designer', 'Aaron Thrissur', 'ATS_PDZ projects', 'CommunityWATS', 'HexnicAI'],
+  keywords: ['Aaron Thalakkottor Sooraj', 'Aaron T S', 'ATS_PDZ', 'Aaron developer Kerala', 'Aaron dossier', 'ATS_PDZ developer', 'Aaron web designer', 'Aaron Thrissur', 'ATS_PDZ projects', 'CommunityWATS', 'HexnicAI'],
   referrer: 'origin-when-cross-origin',
   creator: 'Aaron Thalakkottor Sooraj',
   publisher: 'ATS_PDZ',
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Aaron Thalakkottor Sooraj | Developer Portfolio',
-    description: 'Premium futuristic personal portfolio of Aaron Thalakkottor Sooraj (ATS_PDZ), a developer from Kerala, India building creative digital systems and AI platforms.',
+    title: 'ATS Developer Dossier',
+    description: 'Premium futuristic personal dossier of Aaron Thalakkottor Sooraj (ATS_PDZ), a developer from Kerala, India building creative digital systems and AI platforms.',
     url: '/',
     siteName: 'ATS_PDZ',
     images: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
-        alt: 'Aaron Thalakkottor Sooraj - Developer Portfolio',
+        alt: 'ATS Developer Dossier',
       },
     ],
     locale: 'en_US',
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aaron Thalakkottor Sooraj | Developer Portfolio',
-    description: 'Premium futuristic personal portfolio of Aaron Thalakkottor Sooraj (ATS_PDZ), a developer from Kerala, India building creative digital systems and AI platforms.',
+    title: 'ATS Developer Dossier',
+    description: 'Premium futuristic personal dossier of Aaron Thalakkottor Sooraj (ATS_PDZ), a developer from Kerala, India building creative digital systems and AI platforms.',
     images: ['/og-image.jpg'],
     creator: '@ATSpdz',
     site: '@ATSpdz',
@@ -142,8 +142,8 @@ const structuredData = {
       "@type": "WebSite",
       "@id": "https://aaronts127pdz.vercel.app/#website",
       "url": "https://aaronts127pdz.vercel.app",
-      "name": "Aaron Thalakkottor Sooraj | Developer Portfolio",
-      "description": "Premium futuristic personal portfolio of Aaron Thalakkottor Sooraj (ATS_PDZ)",
+      "name": "ATS Developer Dossier",
+      "description": "Premium futuristic personal dossier of Aaron Thalakkottor Sooraj (ATS_PDZ)",
       "publisher": {
         "@id": "https://aaronts127pdz.vercel.app/#organization"
       }

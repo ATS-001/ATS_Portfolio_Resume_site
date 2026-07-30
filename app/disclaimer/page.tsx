@@ -50,14 +50,14 @@ export default function DisclaimerPage() {
           <section className="bg-white/60 dark:bg-zinc-900/40 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">1. Informational Purposes</h2>
             <p className="mb-4">
-               The information contained on this portfolio website is for general information and demonstration purposes only. While I endeavor to keep the structural and professional information accurate and correct, I make no representations or warranties of any kind about the completeness, accuracy, reliability, or availability with respect to the website contents.
+               The information contained on this dossier website is for general information and demonstration purposes only. While I endeavor to keep the structural and professional information accurate and correct, I make no representations or warranties of any kind about the completeness, accuracy, reliability, or availability with respect to the website contents.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">2. Third-Party Links</h2>
             <p className="mb-4">
-               Through this portfolio you are able to link to other websites or resources (such as GitHub, CodePen, or organization pages) which are not under the control of ATS_PDZ. I have no control over the nature, content, and availability of those external sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
+               Through this dossier you are able to link to other websites or resources (such as GitHub, CodePen, or organization pages) which are not under the control of ATS_PDZ. I have no control over the nature, content, and availability of those external sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
             </p>
           </section>
 
