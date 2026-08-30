@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about-atspdz',
     '/projects',
+    '/resume',
+    '/achievements',
+    '/gallery',
     '/contact',
     '/feedback',
     '/accessibility',
@@ -14,8 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms-and-conditions',
     '/cookie-policy',
     '/disclaimer',
-    '/achievements',
-    '/gallery'
   ];
 
   return routes.map((route) => ({

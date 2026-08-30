@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'ATS_PDZ Dossier',
+    name: 'ATS Developer Dossier | Aaron Thalakkottor Sooraj (ATS_PDZ)',
     short_name: 'ATS_PDZ',
-    description: 'ATS Developer Dossier',
+    description: 'Futuristic Developer Dossier & ATS_PDZ Creative Tech Ecosystem by Aaron Thalakkottor Sooraj',
     start_url: '/',
     display: 'standalone',
     background_color: '#09090b',

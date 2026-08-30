@@ -6,8 +6,20 @@ import ParticleBackground from '@/components/ParticleBackground';
 import { TEAM_MEMBERS, ATS_PDZ_COMPANY_LINKEDIN, ATS_PDZ_DETAILS } from '@/data/team';
 
 export const metadata: Metadata = {
-  title: 'About ATS_PDZ',
-  description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj, and meet the leadership team.',
+  title: 'About ATS_PDZ & Leadership Team',
+  description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj. Meet executive officers Aaron Thalakkottor Sooraj (CEO), Adithya Binesh (CVCO), Abhinav N (CTO), Alwin Thomas V (CXO), Adhin Seby (A-CXO UX), and Akshay T S (A-CXO UI).',
+  openGraph: {
+    title: 'About ATS_PDZ & Leadership Team | Aaron Thalakkottor Sooraj',
+    description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj, and meet the leadership team.',
+    url: 'https://aaronts127pdz.vercel.app/about-atspdz',
+    siteName: 'ATS Developer Dossier',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About ATS_PDZ & Leadership Team',
+    description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj.',
+  }
 };
 
 export default function AboutPage() {

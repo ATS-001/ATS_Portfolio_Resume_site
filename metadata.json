@@ -1,6 +1,6 @@
 {
   "name": "ATS Developer Dossier",
-  "description": "Futuristic personal dossier website for Aaron Thalakkottor Sooraj, showcasing his projects, education, and skills.",
+  "description": "Futuristic developer dossier for Aaron Thalakkottor Sooraj (ATS_PDZ), featuring the ATS_PDZ umbrella organization founded in Feb 2023 in Thrissur, Kerala, executive leadership team (Aaron Thalakkottor Sooraj, Adithya Binesh, Abhinav N, Alwin Thomas V, Adhin Seby, Akshay T S), projects (HexnicAI, CommunityWATS, LOS CAPITANES, GripAssist STRIDE - ASSISTX), and verified certifications.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
