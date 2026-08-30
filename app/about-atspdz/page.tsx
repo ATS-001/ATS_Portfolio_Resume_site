@@ -14,31 +14,41 @@ export const metadata: Metadata = {
     'ATS_PDZ Leadership Team',
     'ATS_PDZ Kerala',
     'ATS_PDZ Thrissur',
+    'ATS_PDZ Headquarters Thrissur',
     'Aaron Thalakkottor Sooraj',
     'Aaron T S',
+    'Aaron Sooraj Thrissur',
     'Adithya Binesh',
     'Adithya Binesh ATS_PDZ',
     'Adithya Binesh CVCO',
+    'Adithya Binesh Thrissur',
     'Abhinav N',
     'Abhinav N ATS_PDZ',
     'Abhinav N CTO',
+    'Abhinav N Thrissur',
     'Alwin Thomas V',
     'Alwin Thomas ATS_PDZ',
     'Alwin Thomas CXO',
+    'Alwin Thomas Thrissur',
     'Adhin Seby',
     'Adhin Seby ATS_PDZ',
     'Adhin Seby UX',
+    'Adhin Seby Thrissur',
     'Akshay T S',
     'Akshay TS',
     'Akshay T S ATS_PDZ',
     'Akshay T S UI',
+    'Akshay T S Thrissur',
     'HexnicAI',
     'CommunityWATS',
     'C-WATS',
     'ATS_PDZ Core',
     'Brooklyn-07',
     'Software Engineering Kerala',
-    'Thrissur Tech Leadership'
+    'Thrissur Tech Leadership',
+    'Tech Startups Thrissur',
+    'Kerala Software Developers',
+    'Creative Tech Initiative Kerala'
   ],
   alternates: {
     canonical: 'https://aaronts127pdz.vercel.app/about-atspdz',
@@ -63,6 +73,16 @@ export const metadata: Metadata = {
     title: 'About ATS_PDZ & Executive Leadership Team',
     description: 'Learn about ATS_PDZ (founded Feb 2023 in Thrissur, Kerala) and connect with the executive officers: Aaron Thalakkottor Sooraj, Adithya Binesh, Abhinav N, Alwin Thomas V, Adhin Seby, and Akshay T S.',
     images: ['/favLogo.png'],
+  },
+  other: {
+    'geo.region': 'IN-KL',
+    'geo.placename': 'Thrissur, Kerala, India',
+    'geo.position': '10.5276;76.2144',
+    'ICBM': '10.5276, 76.2144',
+    'locality': 'Thrissur',
+    'region': 'Kerala',
+    'country-name': 'India',
+    'postal-code': '680001',
   }
 };
 
@@ -88,12 +108,21 @@ const aboutPageSchema = {
         "worksFor": {
           "@type": "Organization",
           "name": "ATS_PDZ",
-          "url": "https://aaronts127pdz.vercel.app"
+          "url": "https://aaronts127pdz.vercel.app",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Thrissur",
+            "addressLocality": "Thrissur",
+            "addressRegion": "Kerala",
+            "postalCode": "680001",
+            "addressCountry": "India"
+          }
         },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Thrissur",
           "addressRegion": "Kerala",
+          "postalCode": "680001",
           "addressCountry": "India"
         }
       }

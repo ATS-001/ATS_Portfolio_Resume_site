@@ -12,14 +12,17 @@ export const metadata: Metadata = {
     'Software Engineering Consultation Kerala',
     'ATS_PDZ Headquarters Thrissur',
     'ATS_PDZ Leadership Contact',
-    'Collaborate with Aaron T S'
+    'Collaborate with Aaron T S',
+    'Software Developer Contact Thrissur',
+    'Hire React Developer Thrissur',
+    'Tech Consultation Thrissur Kerala'
   ],
   alternates: {
     canonical: 'https://aaronts127pdz.vercel.app/contact',
   },
   openGraph: {
     title: 'Contact Aaron Thalakkottor Sooraj & ATS_PDZ | Developer Dossier',
-    description: 'Get in touch with Aaron Thalakkottor Sooraj for engineering collaborations, autonomous AI development, UI/UX architecture, and tech inquiries.',
+    description: 'Get in touch with Aaron Thalakkottor Sooraj for engineering collaborations, autonomous AI development, UI/UX architecture, and tech inquiries in Thrissur, Kerala.',
     url: 'https://aaronts127pdz.vercel.app/contact',
     siteName: 'ATS Developer Dossier',
     type: 'website',
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
         url: '/favLogo.png',
         width: 1200,
         height: 630,
-        alt: 'Contact Aaron Thalakkottor Sooraj - ATS_PDZ',
+        alt: 'Contact Aaron Thalakkottor Sooraj - ATS_PDZ Thrissur, Kerala',
       }
     ]
   },
@@ -37,6 +40,16 @@ export const metadata: Metadata = {
     title: 'Contact Aaron Thalakkottor Sooraj & ATS_PDZ',
     description: 'Get in touch with Aaron Thalakkottor Sooraj for engineering collaborations, autonomous AI development, and UI/UX design.',
     images: ['/favLogo.png'],
+  },
+  other: {
+    'geo.region': 'IN-KL',
+    'geo.placename': 'Thrissur, Kerala, India',
+    'geo.position': '10.5276;76.2144',
+    'ICBM': '10.5276, 76.2144',
+    'locality': 'Thrissur',
+    'region': 'Kerala',
+    'country-name': 'India',
+    'postal-code': '680001',
   }
 };
 
@@ -45,7 +58,7 @@ const contactPageSchema = {
   "@type": "ContactPage",
   "name": "Contact Aaron Thalakkottor Sooraj & ATS_PDZ",
   "url": "https://aaronts127pdz.vercel.app/contact",
-  "description": "Direct communication channel for Aaron Thalakkottor Sooraj and the ATS_PDZ organization.",
+  "description": "Direct communication channel for Aaron Thalakkottor Sooraj and the ATS_PDZ organization in Thrissur, Kerala.",
   "mainEntity": {
     "@type": "Person",
     "name": "Aaron Thalakkottor Sooraj",
@@ -54,8 +67,10 @@ const contactPageSchema = {
     "jobTitle": "Founder & CEO, ATS_PDZ",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Thrissur",
       "addressLocality": "Thrissur",
       "addressRegion": "Kerala",
+      "postalCode": "680001",
       "addressCountry": "India"
     },
     "sameAs": [

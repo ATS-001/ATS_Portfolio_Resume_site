@@ -13,19 +13,22 @@ export const metadata: Metadata = {
     'IEEE Kerala Young Professionals',
     'IEEE SB MLMCE',
     'IIT Bombay Spoken Tutorial HTML',
-    'Vidya Academy of Science and Technology',
+    'Vidya Academy of Science and Technology Thrissur',
+    'VAST Thrissur CSE',
     'MuLearn SBC From Fans To Frontend',
     'UI UX Design Certification Kerala',
     'Computer Science Engineering Achievements',
     'Hackathon Winner Kerala',
+    'Thrissur Hackathon Winners',
+    'Engineering Awards Thrissur',
     'Autonomous AI Agent Certifications'
   ],
   alternates: {
     canonical: 'https://aaronts127pdz.vercel.app/achievements',
   },
   openGraph: {
-    title: 'Achievements & Verified Certifications | Aaron Thalakkottor Sooraj',
-    description: 'Explore the complete verified credentials portfolio, hackathon milestones, and engineering certifications of Aaron Thalakkottor Sooraj and ATS_PDZ.',
+    title: 'Achievements & Verified Certifications | Aaron Thalakkottor Sooraj (Thrissur, Kerala)',
+    description: 'Explore the complete verified credentials portfolio, hackathon milestones, and engineering certifications of Aaron Thalakkottor Sooraj and ATS_PDZ in Thrissur, Kerala.',
     url: 'https://aaronts127pdz.vercel.app/achievements',
     siteName: 'ATS Developer Dossier',
     type: 'website',
@@ -34,7 +37,7 @@ export const metadata: Metadata = {
         url: '/favLogo.png',
         width: 1200,
         height: 630,
-        alt: 'Aaron Thalakkottor Sooraj - Verified Credentials & Achievements',
+        alt: 'Aaron Thalakkottor Sooraj - Verified Credentials & Achievements — Thrissur, Kerala',
       }
     ]
   },
@@ -43,6 +46,16 @@ export const metadata: Metadata = {
     title: 'Achievements & Verified Certifications | Aaron Sooraj (ATS_PDZ)',
     description: 'Explore the verified engineering credentials, ISRO IIRS certifications, IEEE workshops, and technical milestones of Aaron Thalakkottor Sooraj.',
     images: ['/favLogo.png'],
+  },
+  other: {
+    'geo.region': 'IN-KL',
+    'geo.placename': 'Thrissur, Kerala, India',
+    'geo.position': '10.5276;76.2144',
+    'ICBM': '10.5276, 76.2144',
+    'locality': 'Thrissur',
+    'region': 'Kerala',
+    'country-name': 'India',
+    'postal-code': '680001',
   }
 };
 

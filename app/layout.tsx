@@ -107,16 +107,36 @@ export const metadata: Metadata = {
     'IEEE Kerala Young Professionals UI UX',
     'IIT Bombay Spoken Tutorial HTML',
     'Vidya Academy of Science and Technology',
-    // Professional Domains & Tech Stack
-    'Computer Science Engineering Kerala',
+    // Professional Domains & Local Kerala/Thrissur Tech Stack
     'Thrissur Software Developer',
+    'Thrissur Web Development',
+    'Thrissur Tech Startup',
+    'Thrissur AI Engineer',
+    'Thrissur UI UX Designer',
+    'Thrissur Computer Science Engineer',
+    'Kerala Tech Identity',
+    'Kerala Software Developers',
     'Kerala AI Developer',
+    'Software Developers in Thrissur Kerala',
+    'Kochi Thrissur Tech Ecosystem',
+    'Tech Innovators Thrissur Kerala',
+    'Student Developer Thrissur',
+    'Next.js Developer Thrissur',
+    'React Developer Kerala Thrissur',
+    'Full Stack Developer Thrissur Kerala',
+    'AI Agents Developer Kerala',
+    'ATS_PDZ Thrissur HQ',
+    'ATS_PDZ Kerala',
+    'Vidya Academy of Science and Technology Thrissur',
+    'Computer Science Engineering Kerala',
     'UI UX Designers Thrissur',
     'Autonomous AI Agents Developer',
     'Full Stack Web Development Next.js',
     'Next.js 15 React Three.js Developer',
     'TypeScript Developer Kerala',
-    'Assistive Low-Tech Adaptive Hardware Kerala'
+    'Assistive Low-Tech Adaptive Hardware Kerala',
+    'Best Web Developer Thrissur',
+    'Top Tech Talents Thrissur Kerala'
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'Aaron Thalakkottor Sooraj',
@@ -142,7 +162,7 @@ export const metadata: Metadata = {
         url: '/favLogo.png',
         width: 1200,
         height: 630,
-        alt: 'ATS Developer Dossier - Aaron Thalakkottor Sooraj & ATS_PDZ Leadership Team',
+        alt: 'ATS Developer Dossier - Aaron Thalakkottor Sooraj & ATS_PDZ Leadership Team, Thrissur, Kerala',
       },
     ],
     locale: 'en_US',
@@ -178,10 +198,19 @@ export const metadata: Metadata = {
     'geo.placename': 'Thrissur, Kerala, India',
     'geo.position': '10.5276;76.2144',
     'ICBM': '10.5276, 76.2144',
+    'locality': 'Thrissur',
+    'region': 'Kerala',
+    'country-name': 'India',
+    'postal-code': '680001',
+    'address': 'Thrissur, Kerala, India',
+    'target_country': 'in',
+    'coverage': 'Thrissur, Kerala, India, Global',
+    'distribution': 'Global',
+    'rating': 'General',
     'DC.title': 'ATS Developer Dossier | Aaron Thalakkottor Sooraj & ATS_PDZ Team',
     'DC.creator': 'Aaron Thalakkottor Sooraj',
     'DC.description': 'Official developer dossier and executive leadership showcase for ATS_PDZ (Thrissur, Kerala).',
-    'DC.subject': 'Technology, Software Engineering, Artificial Intelligence, UI/UX Design, Leadership, Assistive Hardware',
+    'DC.subject': 'Technology, Software Engineering, Artificial Intelligence, UI/UX Design, Leadership, Assistive Hardware, Thrissur, Kerala',
     'DC.publisher': 'ATS_PDZ',
     'DC.coverage': 'Thrissur, Kerala, India'
   }
@@ -411,12 +440,53 @@ const structuredData = {
       "foundingLocation": {
         "@type": "Place",
         "name": "Thrissur, Kerala, India",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.5276,
+          "longitude": 76.2144
+        },
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Thrissur",
           "addressLocality": "Thrissur",
           "addressRegion": "Kerala",
+          "postalCode": "680001",
           "addressCountry": "India"
         }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Thrissur",
+        "addressLocality": "Thrissur",
+        "addressRegion": "Kerala",
+        "postalCode": "680001",
+        "addressCountry": "India"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.5276,
+        "longitude": 76.2144
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Thrissur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kerala"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "aaronsooraj001@gmail.com",
+        "contactType": "Founder & Technical Partnerships",
+        "areaServed": ["IN", "Worldwide"],
+        "availableLanguage": ["English", "Malayalam"]
       },
       "founder": {
         "@id": "https://aaronts127pdz.vercel.app/#aaron-sooraj"

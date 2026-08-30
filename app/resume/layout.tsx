@@ -10,12 +10,15 @@ export const metadata: Metadata = {
     'ATS_PDZ Resume',
     'Computer Science Engineer Thrissur Kerala',
     'Next.js Full Stack Developer Kerala',
-    'React TypeScript Frontend Engineer',
+    'React TypeScript Frontend Engineer Thrissur',
     'AI Engineer Gemini Kerala',
     'UI UX Designer Resume Kerala',
+    'Software Developer Hire Thrissur',
     'Autonomous Agent Developer Portfolio',
     'ATS_PDZ Founder Bio',
-    'Aaron Thalakkottor Sooraj Hire'
+    'Aaron Thalakkottor Sooraj Hire',
+    'Freelance Web Developer Thrissur',
+    'Top Software Engineers Thrissur'
   ],
   alternates: {
     canonical: 'https://aaronts127pdz.vercel.app/resume',
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
         url: '/favLogo.png',
         width: 1200,
         height: 630,
-        alt: 'Aaron Thalakkottor Sooraj Resume & CV - ATS_PDZ',
+        alt: 'Aaron Thalakkottor Sooraj Resume & CV - ATS_PDZ Thrissur, Kerala',
       }
     ]
   },
@@ -40,6 +43,16 @@ export const metadata: Metadata = {
     title: 'Resume & Curriculum Vitae | Aaron Thalakkottor Sooraj',
     description: 'Live curriculum vitae of Aaron Thalakkottor Sooraj (ATS_PDZ), featuring education, computer science engineering skills, and verified milestones.',
     images: ['/favLogo.png'],
+  },
+  other: {
+    'geo.region': 'IN-KL',
+    'geo.placename': 'Thrissur, Kerala, India',
+    'geo.position': '10.5276;76.2144',
+    'ICBM': '10.5276, 76.2144',
+    'locality': 'Thrissur',
+    'region': 'Kerala',
+    'country-name': 'India',
+    'postal-code': '680001',
   }
 };
 
@@ -51,7 +64,7 @@ const resumePageSchema = {
   "mainEntity": {
     "@type": "Person",
     "name": "Aaron Thalakkottor Sooraj",
-    "alternateName": ["Aaron T S", "Aaron Sooraj", "ATS_PDZ", "ATS"],
+    "alternateName": ["Aaron T S", "Aaron Sooraj", "ATS_PDZ", "ATS", "Aaron Thalakkottor", "Aaron T S Thrissur"],
     "jobTitle": "Software Engineer & Founder CEO",
     "worksFor": {
       "@type": "Organization",
@@ -64,8 +77,10 @@ const resumePageSchema = {
     },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Thrissur",
       "addressLocality": "Thrissur",
       "addressRegion": "Kerala",
+      "postalCode": "680001",
       "addressCountry": "India"
     },
     "sameAs": [
