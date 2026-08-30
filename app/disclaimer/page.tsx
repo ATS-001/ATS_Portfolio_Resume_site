@@ -64,7 +64,7 @@ export default function DisclaimerPage() {
           <section>
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">3. Credential Verification Links</h2>
             <p className="mb-4">
-               Links provided for verifying certifications, diplomas, or credentials redirect to third-party issuing platforms (such as Credly, Microsoft, Coursera). Verification accuracy relies wholly on the issuing organization's database and continued hosting capabilities.
+               Links provided for verifying certifications, diplomas, or credentials redirect to third-party issuing platforms (such as Credly, Microsoft, Coursera). Verification accuracy relies wholly on the issuing organization&apos;s database and continued hosting capabilities.
             </p>
           </section>
 

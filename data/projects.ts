@@ -1,4 +1,4 @@
-export type ProjectStatus = "Completed" | "Ongoing" | "Under Development" | "Active Development" | "Completed (Archived)" | "Continuous Integration / Continuous Deployment (CI/CD)";
+export type ProjectStatus = "Completed" | "Ongoing" | "Under Development" | "Active Development" | "Completed (Archived)" | "Continuous Integration / Continuous Deployment (CI/CD)" | "Completed & CI/CD";
 
 export type Project = {
   id: string;
@@ -6,6 +6,14 @@ export type Project = {
   type?: string;
   description: string;
   longDescription?: string;
+  problemStatement?: string;
+  targetUsers?: string;
+  teamName?: string;
+  image?: string;
+  pdf?: string;
+  specifications?: { label: string; value: string }[];
+  features?: string[];
+  advantages?: string[];
   contributors?: string[];
   organization?: string;
   techStack: string[];
@@ -17,6 +25,75 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
+  {
+    id: "los-capitanes",
+    title: "LOS CAPITANES",
+    type: "Interactive 3D Web Application",
+    description: "LOS CAPITANES is an interactive 3D web application honoring Argentina’s World Cup-winning captains (Passarella, Maradona, and Messi), with full attribution and credit to AFA and FIFA for historic imagery and contextual assets.",
+    techStack: ["React", "GSAP", "Three.js", "React Three Fiber", "Tailwind CSS", "Vite", "Antigravity"],
+    status: "Completed",
+    github: "https://github.com/ATS-001/LOS-CAPITANES",
+    live: "https://los-capitanes.vercel.app/",
+    categories: ["3D Graphics", "Web Development", "Interactive Media", "Sports"]
+  },
+  {
+    id: "multi-agent-study-buddy",
+    title: "Multi-Agent Study Buddy (Local AI Learning Assistant)",
+    type: "Autonomous Multi-Agent System",
+    description: "Architected and built an autonomous multi-agent learning coordinator using Python, the Google Antigravity SDK, and Google GenAI SDK for the official Kaggle AI Agents Capstone Project.",
+    techStack: ["Python", "Google Antigravity SDK", "Google GenAI SDK", "Multi-Agent Systems", "Kaggle Capstone"],
+    status: "Completed (Archived)",
+    github: "https://github.com/ATS-001/multi-agent-study-buddy-aaron",
+    live: "https://www.youtube.com/watch?v=kYVtXpdyTN8",
+    categories: ["AI Agents", "Autonomous Systems", "Educational Technology", "Python"]
+  },
+  {
+    id: "personal-portfolio-react-tailwind-bootcamp",
+    title: "Personal Portfolio Application Using Interactive React & Tailwind",
+    type: "Interactive Web Application",
+    description: "Architecture: Component-driven React application running on the Vite build engine. Styling: Responsive, utility-first UI grid using Tailwind CSS with interactive hover mechanics. Animations: Fluid, physics-based slide-in micro-animations controlled via Framer Motion. Logic: Native JavaScript/React state variables managing high-contrast theme toggles and floating profile modals.",
+    techStack: ["React", "Tailwind CSS", "Framer Motion", "Vite", "JavaScript"],
+    status: "Completed (Archived)",
+    github: "https://github.com/ATS-001/5-DAY-WEB-DEVELOPMENT-BOOTCAMP-ATS-React-Tailwind-Fmjs/",
+    live: "https://5d-webdev-btcmp-reacttwfm-ats-001.vercel.app/",
+    categories: ["Web Development", "UI/UX", "Frontend Engineering"]
+  },
+  {
+    id: "gripassist",
+    title: "GripAssist (STRIDE - ASSISTX)",
+    type: "Assistive Technology & 3D Ergonomic Design",
+    description: "GripAssist is a low-tech oversized adaptive utensil holder designed to improve grip, stability, and ease of use for children with limited hand strength and motor coordination (such as cerebral palsy), enabling them to eat independently.",
+    problemStatement: "Problem 2: 'Adithyan Cannot Hold a Spoon to Eat Independently' — Theme: Oversized Adaptive Utensil Holder for Assisted Feeding (Low-Tech)",
+    targetUsers: "Children with Cerebral Palsy, Physical Disabilities, and Multiple Disabilities",
+    teamName: "Brooklyn-07 | ATS_PDZ",
+    image: "/Screenshot 2026-08-30 010333.png",
+    pdf: "/Gripassist_abstract.pdf",
+    contributors: ["Aaron Thalakkottor Sooraj", "Alwin Thomas V", "Adithya Binesh", "Abhinav N"],
+    organization: "STRIDE - ASSISTX | Brooklyn-07 | ATS_PDZ",
+    specifications: [
+      { label: "Dimensions", value: "10–12 cm length, 3–5 cm diameter (Child-friendly grip)" },
+      { label: "Handle Compatibility", value: "Fits standard utensil handles (0.5–1.5 cm diameter)" },
+      { label: "Materials", value: "3D-printed using PLA (rigid structure) or TPU (flexible & comfortable), food-safe silicone/rubber" },
+      { label: "Maintenance", value: "Lightweight, reusable, washable with water and mild soap" }
+    ],
+    features: [
+      "Oversized ergonomic design for comfortable multi-finger & palm handling",
+      "Anti-rotation internal structure preventing spoons/forks from twisting or spilling",
+      "Universal insertion zone compatible with standard utensils and toothbrushes",
+      "Palm support surface distributing pressure and minimizing muscle fatigue",
+      "Textured grip support enhancing friction and holding stability"
+    ],
+    advantages: [
+      "Improves independence during eating and meal times",
+      "Reduces frustration and accidental mealtime dropping/mess",
+      "Enhances grip strength support without electronic complexity",
+      "Hygienic, food-safe, and simple to clean",
+      "Low-cost and locally manufacturable using accessible 3D printing"
+    ],
+    techStack: ["Tinkercad", "3D Modeling", "3D CAD Viewer", "PLA / TPU 3D Printing", "Assistive Design"],
+    status: "Completed (Archived)",
+    categories: ["Assistive Tech", "3D Design", "Healthcare", "Product Design"]
+  },
   {
     id: "project-hospital-readmit-model",
     title: "Project Pulse: Readmission Risk Console",
@@ -145,11 +222,12 @@ export const PROJECTS: Project[] = [
   {
     id: "hexnicai",
     title: "HexnicAI",
-    description: "AI-based personalized and inclusive learning platform.",
+    type: "AI Learning Platform (v3.0)",
+    description: "AI-based personalized and inclusive learning platform. Currently in its 3rd version (v3.0).",
     contributors: ["Aaron", "Alwin Thomas", "Adithya Binesh", "Abhinav N", "Adhin Seby", "Akshay TS"],
     organization: "Part of ATS_PDZ | Brother organization to CommunityWATS",
     techStack: ["UI/UX", "V0 by Vercel", "Prompt Engineering", "Vercel Deployment"],
-    status: "Completed",
+    status: "Completed & CI/CD",
     github: "https://github.com/ATS-001/HexnicAI",
     live: "https://hexnicai.vercel.app/",
     categories: ["AI Platform", "Educational Technology", "Experimental Tech"]
@@ -157,10 +235,12 @@ export const PROJECTS: Project[] = [
   {
     id: "community-wats",
     title: "CommunityWATS (C-WATS)",
-    description: "AI-based personalized and inclusive learning ecosystem covering multiple subjects.",
+    type: "Educational Ecosystem (v1.0)",
+    description: "AI-based personalized and inclusive learning ecosystem covering multiple subjects. Currently in its 1st version (v1.0).",
+    contributors: ["Aaron", "Alwin Thomas", "Adithya Binesh", "Abhinav N", "Adhin Seby", "Akshay TS"],
     organization: "Brother organization to HexnicAI",
     techStack: ["UI/UX", "Google AI Studio", "Prompt Engineering", "Vercel Deployment"],
-    status: "Continuous Integration / Continuous Deployment (CI/CD)",
+    status: "Completed & CI/CD",
     github: "https://github.com/ATS-001/Community-WebsiteATS",
     live: "https://c-wats.vercel.app/",
     categories: ["Educational Technology", "AI Tools", "Experimental Platform"]

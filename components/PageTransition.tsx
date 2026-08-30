@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useSyncExternalStore } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { usePathname } from 'next/navigation';
 
@@ -14,39 +14,42 @@ const ROUTES_ORDER = [
   '/feedback',
 ];
 
+function subscribeReducedMotion(callback: () => void) {
+  if (typeof window === 'undefined') return () => {};
+  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  mediaQuery.addEventListener('change', callback);
+  return () => mediaQuery.removeEventListener('change', callback);
+}
+
+function getReducedMotionSnapshot() {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return false;
+}
+
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [direction, setDirection] = useState(1);
   const [prevPath, setPrevPath] = useState(pathname);
 
-  useEffect(() => {
-    if (prevPath !== pathname) {
-      const prevIndex = ROUTES_ORDER.indexOf(prevPath);
-      const currentIndex = ROUTES_ORDER.indexOf(pathname);
-      
-      // Default to forward (1) if not found in list, otherwise calculate direction
-      if (prevIndex !== -1 && currentIndex !== -1) {
-        setDirection(currentIndex > prevIndex ? 1 : -1);
-      } else {
-        setDirection(1);
-      }
-      setPrevPath(pathname);
-    }
-  }, [pathname, prevPath]);
+  if (prevPath !== pathname) {
+    const prevIndex = ROUTES_ORDER.indexOf(prevPath);
+    const currentIndex = ROUTES_ORDER.indexOf(pathname);
+    setPrevPath(pathname);
+    setDirection(prevIndex !== -1 && currentIndex !== -1 && currentIndex < prevIndex ? -1 : 1);
+  }
 
   // Reduced motion check
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mediaQuery.matches);
-    
-    const listener = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener('change', listener);
-    return () => mediaQuery.removeEventListener('change', listener);
-  }, []);
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot
+  );
 
-  const variants: any = {
+  const variants = {
     initial: (dir: number) => ({
       x: prefersReducedMotion ? 0 : (dir > 0 ? 50 : -50),
       opacity: 0,
@@ -55,7 +58,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       x: 0,
       opacity: 1,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
+        x: { type: "spring" as const, stiffness: 300, damping: 30 },
         opacity: { duration: 0.3 }
       }
     },
@@ -63,7 +66,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       x: prefersReducedMotion ? 0 : (dir > 0 ? -50 : 50),
       opacity: 0,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
+        x: { type: "spring" as const, stiffness: 300, damping: 30 },
         opacity: { duration: 0.3 }
       }
     })

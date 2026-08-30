@@ -30,22 +30,25 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Social Links */}
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 mb-2">Connect</h3>
-            <a href="https://github.com/ATS-001" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
-              GitHub <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
-            </a>
-            <a href="https://www.linkedin.com/in/aaronts127pdz/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
-              LinkedIn <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
-            </a>
-            <a href="https://x.com/ATSpdz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
-              X (Twitter) <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
-            </a>
-            <a href="https://www.youtube.com/@ats_pdz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
-              YouTube <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
-            </a>
-          </div>
+            {/* Social Links */}
+            <div className="flex flex-col space-y-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 mb-2">Connect</h3>
+              <a href="https://github.com/ATS-001" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
+                GitHub <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
+              </a>
+              <a href="https://www.linkedin.com/in/aaronts127pdz/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
+                LinkedIn (Personal) <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
+              </a>
+              <a href="https://www.linkedin.com/company/ats-pdz/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
+                LinkedIn (ATS_PDZ) <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
+              </a>
+              <a href="https://x.com/ATSpdz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
+                X (Twitter) <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
+              </a>
+              <a href="https://www.youtube.com/@ats_pdz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 w-fit text-sm font-medium hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">
+                YouTube <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
 
           {/* Navigation */}
           <div className="flex flex-col space-y-4">

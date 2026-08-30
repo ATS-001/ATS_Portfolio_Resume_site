@@ -131,10 +131,16 @@ const structuredData = {
       "name": "ATS_PDZ",
       "url": "https://aaronts127pdz.vercel.app",
       "logo": "https://aaronts127pdz.vercel.app/favLogo.png",
+      "foundingDate": "2023-02",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Thrissur, Kerala, India"
+      },
       "founder": {
         "@id": "https://aaronts127pdz.vercel.app/#person"
       },
       "sameAs": [
+        "https://www.linkedin.com/company/ats-pdz/",
         "https://x.com/ATSpdz"
       ]
     },

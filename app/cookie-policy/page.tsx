@@ -58,13 +58,13 @@ export default function CookiePolicyPage() {
                <div>
                   <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">Preference Cookies</h3>
                   <p>
-                     This website uses cookies or local storage to remember your preferences. Specifically, I store your preference for "Light" or "Dark" theme so that your experience is consistent across visits.
+                     This website uses cookies or local storage to remember your preferences. Specifically, I store your preference for &quot;Light&quot; or &quot;Dark&quot; theme so that your experience is consistent across visits.
                   </p>
                </div>
                <div>
                   <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">Analytics Cookies</h3>
                   <p>
-                     I may use third-party tools like Google Analytics or Vercel Analytics that utilize cookies to collect aggregated data about how visitors use the website. This helps me improve the website's performance and structure. This data does not personally identify you.
+                     I may use third-party tools like Google Analytics or Vercel Analytics that utilize cookies to collect aggregated data about how visitors use the website. This helps me improve the website&apos;s performance and structure. This data does not personally identify you.
                   </p>
                </div>
             </div>
@@ -73,7 +73,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">3. User Controls</h2>
             <p className="mb-4">
-               You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites. Note that disabling certain storage mechanisms might affect your ability to save preferences like the dark mode theme.
+               You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers&apos; respective websites. Note that disabling certain storage mechanisms might affect your ability to save preferences like the dark mode theme.
             </p>
           </section>
 

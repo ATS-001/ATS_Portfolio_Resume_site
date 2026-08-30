@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useSyncExternalStore } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Github, Moon, Sun } from 'lucide-react';
 import Link from 'next/link';
@@ -18,15 +18,17 @@ const navItems = [
   { name: 'Feedback', href: '/feedback' },
 ];
 
+const emptySubscribe = () => () => {};
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   return (
     <>

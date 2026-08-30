@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import ParticleBackground from '@/components/ParticleBackground';
-import { Github, ExternalLink, Search, X, Users, Code, LayoutGrid, Tag, Info, Figma } from 'lucide-react';
+import { Github, ExternalLink, Search, X, Users, Code, LayoutGrid, Tag, Info, Figma, Target, CheckCircle2, FileText, Sparkles, Layers } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 import { PROJECTS, Project, ProjectStatus } from '@/data/projects';
@@ -13,6 +14,7 @@ const ALL_CATEGORIES = Array.from(new Set(PROJECTS.flatMap(p => p.categories))).
 const getStatusStyles = (status: ProjectStatus) => {
   switch (status) {
     case 'Completed': return 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20';
+    case 'Completed & CI/CD': return 'bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/20';
     case 'Ongoing': return 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20';
     case 'Under Development': 
     case 'Active Development': return 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20';
@@ -142,6 +144,22 @@ export default function ProjectsPage() {
               >
                 {/* Glow behind card on hover */}
                 <div className="absolute inset-0 bg-zinc-900/0 hover:bg-zinc-900/[0.02] dark:hover:bg-white/[0.02] transition-colors duration-500" />
+
+                {/* Optional Project Image / CAD Preview */}
+                {project.image && (
+                  <div className="relative w-full h-44 bg-zinc-950 flex items-center justify-center border-b border-zinc-200/80 dark:border-zinc-800/80 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-zinc-900/80 text-white text-[10px] font-semibold uppercase tracking-wider backdrop-blur-md border border-white/10">
+                      3D Model
+                    </div>
+                  </div>
+                )}
                 
                 <div className="p-6 md:p-8 flex flex-col h-full relative z-10">
                   <div className="flex justify-between items-start mb-6">
@@ -249,6 +267,38 @@ export default function ProjectsPage() {
               <div className="p-6 md:p-8 overflow-y-auto custom-scrollbar">
                 <div className="space-y-8">
                   
+                  {/* Image / 3D Model Attachment if available */}
+                  {selectedProject.image && (
+                    <div className="relative w-full rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center p-4">
+                      <div className="relative w-full max-w-md h-64 sm:h-72">
+                        <Image
+                          src={selectedProject.image}
+                          alt={selectedProject.title}
+                          fill
+                          className="object-contain"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Problem Statement & Context if available */}
+                  {selectedProject.problemStatement && (
+                    <div className="p-5 rounded-2xl bg-blue-50/60 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/30">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 mb-2 flex items-center gap-1.5">
+                        <Target size={14} /> Problem Statement & Theme
+                      </h4>
+                      <p className="text-sm text-zinc-800 dark:text-zinc-200 leading-relaxed font-medium">
+                        {selectedProject.problemStatement}
+                      </p>
+                      {selectedProject.targetUsers && (
+                        <div className="mt-3 pt-3 border-t border-blue-200/50 dark:border-blue-900/40 text-xs text-zinc-600 dark:text-zinc-400">
+                          <strong className="text-zinc-900 dark:text-zinc-200">Target Users:</strong> {selectedProject.targetUsers}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   {/* Description */}
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3 flex items-center gap-2">
@@ -258,6 +308,59 @@ export default function ProjectsPage() {
                       {selectedProject.description}
                     </p>
                   </div>
+
+                  {/* Specifications Table/Grid if available */}
+                  {selectedProject.specifications && selectedProject.specifications.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3 flex items-center gap-2">
+                        <FileText size={16} /> Design Specifications
+                      </h4>
+                      <div className="grid sm:grid-cols-2 gap-3">
+                        {selectedProject.specifications.map((spec, i) => (
+                          <div key={i} className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200/80 dark:border-zinc-800">
+                            <div className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-1">{spec.label}</div>
+                            <div className="text-xs sm:text-sm font-medium text-zinc-800 dark:text-zinc-200">{spec.value}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Key Features & Advantages if available */}
+                  {(selectedProject.features || selectedProject.advantages) && (
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      {selectedProject.features && (
+                        <div>
+                          <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3 flex items-center gap-2">
+                            <Sparkles size={16} /> Key Features
+                          </h4>
+                          <ul className="space-y-2">
+                            {selectedProject.features.map((feat, i) => (
+                              <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
+                                <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
+                                <span>{feat}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {selectedProject.advantages && (
+                        <div>
+                          <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3 flex items-center gap-2">
+                            <Layers size={16} /> Advantages
+                          </h4>
+                          <ul className="space-y-2">
+                            {selectedProject.advantages.map((adv, i) => (
+                              <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
+                                <CheckCircle2 size={14} className="text-blue-500 shrink-0 mt-0.5" />
+                                <span>{adv}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   <div className="grid md:grid-cols-2 gap-8">
                     {/* Tech Stack */}
@@ -320,7 +423,7 @@ export default function ProjectsPage() {
                          rel="noopener noreferrer"
                          className="flex items-center gap-2 px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-all shadow-lg shadow-zinc-900/20 dark:shadow-white/20 active:scale-95"
                        >
-                         <ExternalLink size={18} /> View Live Project
+                         <ExternalLink size={18} /> {selectedProject.live.includes('youtube.com') || selectedProject.live.includes('youtu.be') ? 'Watch YouTube Demo' : 'View Live Project'}
                        </a>
                     )}
                     {selectedProject.github && (
@@ -341,6 +444,16 @@ export default function ProjectsPage() {
                          className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-xl font-semibold border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all active:scale-95"
                        >
                          <Figma size={18} /> Figma Design
+                       </a>
+                    )}
+                    {selectedProject.pdf && (
+                       <a 
+                         href={selectedProject.pdf} 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-lg shadow-blue-500/20 active:scale-95"
+                       >
+                         <FileText size={18} /> View Document Abstract (PDF)
                        </a>
                     )}
                   </div>

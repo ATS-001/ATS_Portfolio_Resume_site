@@ -132,11 +132,7 @@ export default function CertificateDeck() {
     return counts;
   }, [searchQuery]);
 
-  useEffect(() => {
-    if (activeId && !filteredCards.find(c => c.id === activeId)) {
-      setActiveId(null);
-    }
-  }, [filteredCards, activeId]);
+  const effectiveActiveId = filteredCards.some(c => c.id === activeId) ? activeId : null;
 
   const handleCardClick = (cert: Certificate, e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -224,7 +220,7 @@ export default function CertificateDeck() {
         <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           <AnimatePresence>
             {filteredCards.map((cert) => {
-              const isActive = activeId === cert.id;
+              const isActive = effectiveActiveId === cert.id;
               
               return (
                 <motion.div
