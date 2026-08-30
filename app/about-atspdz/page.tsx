@@ -6,25 +6,108 @@ import ParticleBackground from '@/components/ParticleBackground';
 import { TEAM_MEMBERS, ATS_PDZ_COMPANY_LINKEDIN, ATS_PDZ_DETAILS } from '@/data/team';
 
 export const metadata: Metadata = {
-  title: 'About ATS_PDZ & Leadership Team',
-  description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj. Meet executive officers Aaron Thalakkottor Sooraj (CEO), Adithya Binesh (CVCO), Abhinav N (CTO), Alwin Thomas V (CXO), Adhin Seby (A-CXO UX), and Akshay T S (A-CXO UI).',
+  title: 'About ATS_PDZ & Executive Leadership Team',
+  description: 'Official organization dossier and leadership profile for ATS_PDZ (founded Feb 2023, Thrissur, Kerala). Meet executive officers Aaron Thalakkottor Sooraj (CEO), Adithya Binesh (CVCO), Abhinav N (CTO), Alwin Thomas V (CXO), Adhin Seby (A-CXO UX), and Akshay T S (A-CXO UI).',
+  keywords: [
+    'ATS_PDZ',
+    'ATS PDZ',
+    'ATS_PDZ Leadership Team',
+    'ATS_PDZ Kerala',
+    'ATS_PDZ Thrissur',
+    'Aaron Thalakkottor Sooraj',
+    'Aaron T S',
+    'Adithya Binesh',
+    'Adithya Binesh ATS_PDZ',
+    'Adithya Binesh CVCO',
+    'Abhinav N',
+    'Abhinav N ATS_PDZ',
+    'Abhinav N CTO',
+    'Alwin Thomas V',
+    'Alwin Thomas ATS_PDZ',
+    'Alwin Thomas CXO',
+    'Adhin Seby',
+    'Adhin Seby ATS_PDZ',
+    'Adhin Seby UX',
+    'Akshay T S',
+    'Akshay TS',
+    'Akshay T S ATS_PDZ',
+    'Akshay T S UI',
+    'HexnicAI',
+    'CommunityWATS',
+    'C-WATS',
+    'ATS_PDZ Core',
+    'Brooklyn-07',
+    'Software Engineering Kerala',
+    'Thrissur Tech Leadership'
+  ],
+  alternates: {
+    canonical: 'https://aaronts127pdz.vercel.app/about-atspdz',
+  },
   openGraph: {
-    title: 'About ATS_PDZ & Leadership Team | Aaron Thalakkottor Sooraj',
-    description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj, and meet the leadership team.',
+    title: 'About ATS_PDZ & Executive Leadership Team | Aaron Thalakkottor Sooraj',
+    description: 'Learn about ATS_PDZ (founded Feb 2023 in Thrissur, Kerala) and connect with the executive officers: Aaron Thalakkottor Sooraj, Adithya Binesh, Abhinav N, Alwin Thomas V, Adhin Seby, and Akshay T S.',
     url: 'https://aaronts127pdz.vercel.app/about-atspdz',
     siteName: 'ATS Developer Dossier',
-    type: 'website',
+    type: 'profile',
+    images: [
+      {
+        url: '/favLogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'ATS_PDZ Executive Leadership Team — Thrissur, Kerala',
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About ATS_PDZ & Leadership Team',
-    description: 'Learn about ATS_PDZ, the creative-tech identity and umbrella organization founded in February 2023 in Thrissur, Kerala by Aaron Thalakkottor Sooraj.',
+    title: 'About ATS_PDZ & Executive Leadership Team',
+    description: 'Learn about ATS_PDZ (founded Feb 2023 in Thrissur, Kerala) and connect with the executive officers: Aaron Thalakkottor Sooraj, Adithya Binesh, Abhinav N, Alwin Thomas V, Adhin Seby, and Akshay T S.',
+    images: ['/favLogo.png'],
+  }
+};
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About ATS_PDZ & Executive Leadership Team",
+  "description": "Information about ATS_PDZ, its founding in February 2023 in Thrissur, Kerala, and its executive officers.",
+  "url": "https://aaronts127pdz.vercel.app/about-atspdz",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "ATS_PDZ Executive Leadership Team",
+    "itemListElement": TEAM_MEMBERS.map((member, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Person",
+        "name": member.name,
+        "jobTitle": member.roleFull,
+        "roleName": member.roleShort,
+        "description": member.description,
+        "sameAs": member.linkedin,
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ATS_PDZ",
+          "url": "https://aaronts127pdz.vercel.app"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thrissur",
+          "addressRegion": "Kerala",
+          "addressCountry": "India"
+        }
+      }
+    }))
   }
 };
 
 export default function AboutPage() {
   return (
     <main className="relative min-h-screen pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
       <ParticleBackground />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -227,11 +310,16 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TEAM_MEMBERS.map((member) => (
-              <div
+              <article
                 key={member.id}
                 id={`team-member-${member.id}`}
+                itemScope
+                itemType="https://schema.org/Person"
                 className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-zinc-50/70 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 backdrop-blur-xl transition-all duration-300 hover:shadow-lg dark:hover:shadow-none"
               >
+                <meta itemProp="worksFor" content="ATS_PDZ" />
+                <meta itemProp="affiliation" content="ATS_PDZ" />
+                <meta itemProp="addressLocality" content="Thrissur, Kerala, India" />
                 <div>
                   {/* Top Row: Initials Badge, Role Tag & Tenure Tag */}
                   <div className="flex items-center justify-between gap-3 mb-5">
@@ -246,10 +334,10 @@ export default function AboutPage() {
                   </div>
 
                   {/* Name & Designation */}
-                  <h3 className="text-xl font-bold dark:text-white text-zinc-900 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors mb-1">
+                  <h3 itemProp="name" className="text-xl font-bold dark:text-white text-zinc-900 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors mb-1">
                     {member.name}
                   </h3>
-                  <div className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">
+                  <div itemProp="jobTitle" className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">
                     {member.designation}
                   </div>
 
@@ -269,7 +357,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+                  <p itemProp="description" className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
                     {member.description}
                   </p>
                 </div>
@@ -281,6 +369,7 @@ export default function AboutPage() {
                   </span>
                   <a
                     href={member.linkedin}
+                    itemProp="sameAs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-zinc-200/70 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 hover:bg-[#0077b5] hover:text-white dark:hover:bg-[#0077b5] dark:hover:text-white transition-all group/btn focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -292,7 +381,7 @@ export default function AboutPage() {
                     <ArrowUpRight className="w-3 h-3 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </section>

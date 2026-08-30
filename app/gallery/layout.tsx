@@ -1,22 +1,64 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Visual Gallery & Artwork',
-  description: 'Visual dossier and creative portfolio by Aaron Thalakkottor Sooraj (ATS_PDZ), showcasing photography, digital illustrations, and sketches.',
+  title: 'Visual Gallery & Creative Art | Aaron Thalakkottor Sooraj (ATS_PDZ)',
+  description: 'Visual dossier and creative design gallery by Aaron Thalakkottor Sooraj (ATS_PDZ), featuring generative AI concept art, 3D renderings, sketches, photography, and UI/UX design artwork.',
+  keywords: [
+    'Aaron Thalakkottor Sooraj Artwork',
+    'ATS_PDZ Gallery',
+    'Creative Tech Gallery Kerala',
+    '3D Renders Aaron Sooraj',
+    'Generative AI Art Gallery',
+    'UI UX Design Concepts ATS_PDZ',
+    'Digital Illustrations Thrissur'
+  ],
+  alternates: {
+    canonical: 'https://aaronts127pdz.vercel.app/gallery',
+  },
   openGraph: {
-    title: 'Visual Gallery & Artwork | Aaron Thalakkottor Sooraj',
-    description: 'Visual dossier and creative portfolio by Aaron Thalakkottor Sooraj (ATS_PDZ), showcasing photography, digital illustrations, and sketches.',
+    title: 'Visual Gallery & Creative Art | Aaron Thalakkottor Sooraj',
+    description: 'Visual dossier and creative design gallery by Aaron Thalakkottor Sooraj (ATS_PDZ), showcasing digital illustrations, 3D renderings, and sketches.',
     url: 'https://aaronts127pdz.vercel.app/gallery',
     siteName: 'ATS Developer Dossier',
     type: 'website',
+    images: [
+      {
+        url: '/favLogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Visual Gallery - Aaron Thalakkottor Sooraj (ATS_PDZ)',
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Visual Gallery & Artwork | Aaron Thalakkottor Sooraj',
-    description: 'Visual dossier and creative portfolio by Aaron Thalakkottor Sooraj (ATS_PDZ), showcasing photography, digital illustrations, and sketches.',
+    title: 'Visual Gallery & Creative Art | Aaron Thalakkottor Sooraj',
+    description: 'Visual dossier and creative design gallery by Aaron Thalakkottor Sooraj (ATS_PDZ), showcasing photography, 3D art, and sketches.',
+    images: ['/favLogo.png'],
+  }
+};
+
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Aaron Thalakkottor Sooraj Creative Visual Gallery",
+  "url": "https://aaronts127pdz.vercel.app/gallery",
+  "description": "Creative design, sketches, 3D renders, and digital illustrations by Aaron Thalakkottor Sooraj and ATS_PDZ.",
+  "author": {
+    "@type": "Person",
+    "name": "Aaron Thalakkottor Sooraj"
   }
 };
 
 export default function GalleryLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }}
+      />
+      {children}
+    </>
+  );
 }
+
